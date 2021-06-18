@@ -12,16 +12,27 @@
             margin: 0;
             padding: 0;
         }
-
-        .head-title {
+        title {
             padding: 20px;
-            margin: auto;
+            margin: 0;
             display: flex;
+            display: inline-block;
             justify-content: space-between;
             font-size: 30px;
+            background-color: red;
+
         }
 
         .head-button {
+            display: inline-block;
+            text-align: center;
+            background-color: aqua;
+            font-size: 0px;
+        }
+
+        .head-button li {
+            display: inline-block;
+            background-color: bisque;
             text-align: center;
         }
 
@@ -31,6 +42,9 @@
             margin: auto;
             text-align: center;
             text-decoration: none;
+            font-size: 30px;
+
+
         }
 
         h1 {
@@ -44,18 +58,27 @@
         }
 
         .package {
+            width: 900px;
             display: flex;
-            margin: auto;
+            margin: 0;
+            padding: 0px;
             justify-content: space-between;
+            text-align: center;
         }
 
-        .package-img {}
+        .package-img {
+            display: inline-block;
+            width: 50%;
+            padding: 0px;
+            margin: 0px;
+        }
 
 
         .package-item {
-            width: 100%;
+            display: inline-block;
+            width: 50%;
             height: 100%;
-            margin: auto;
+            margin: 0;
             padding: 80px;
 
         }
@@ -87,18 +110,26 @@
 </head>
 
 <body>
-    <wrap class="head-title">
-        <div class="head-homepage">LINE</div>
-        <div class="head-button">
-            <a href="">Life on LINE</a>
-            <a href="">通訊軟體</a>
-            <a href="">服務總覽</a>
-        </div>
-        <img class="head-img" src="pic_langue_list_button.png" alt="">
-    </wrap>
+    <header class="head-title">
+        <title >LINE</title>
+        <nav class="head-button">
+            <ul>
+                <li>
+                    <a href="">Life on LINE</a>
+                </li>
+                <li>
+                    <a href="">通訊軟體</a>
+                </li>
+                <li>
+                    <a href="">服務總覽</a>
+                </li>
+            </ul>
+        </nav>
+        <img class="head-img" rc="pic_langue_list_button.png" alt="">
+    </header>
 
     <img src="pic_head.png" alt="">
-        <wrap>
+    <wrap>
         <h1 class="title">Lif on LINE</h1>
         <p class="h1-detail">超越通訊軟體，LINE為用戶建構全新的溝通型態與豐富的數位生活，成為用戶生活中不可或缺的平台。</p>
     </wrap>
