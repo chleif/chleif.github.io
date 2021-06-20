@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>會員申辦</h1>
+    <p>現在申辦送飲料!</p>
+    <article>
+        
+        <section>
+            <h2>基本資料(必填)</h2>
+            <form action="">
+                <div>
+                    <label for="username">姓名：</label>
+                    <input type="text">
+                </div>
+                <div>
+                    性別：
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        男
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        女
+                    </label>
+                    <label>
+                        <input type="radio" name="gernder" value="secreat">
+                        秘密優~
+                    </label>
+                </div>
+                <div>
+                    <label for="birthDay">生日：</label>
+                    <input type="date" id="birthDay" name="birthDay">
+                </div>
+                <div>
+                    <label for="age">年齡：</label>
+                    <input type="number" id="age" name="age" min="12" max="80">
+                </div>
+                <div>
+                    <label for="phoneNumber">電話：</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                </div>
+
+                <div>
+                    <label for="email">Email：</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>讓我們更瞭解你</h2>
+            <form action="">
+                <div>
+                    <label for="photoSticker">上傳大頭貼</label>
+                    <input type="file" id="photoSticker" name="photoSticker">
+                </div>
+                <div>
+                    <label for="blog">個人部落格 ： </label>
+                    <input type="url" name="blog" id="blog">
+                </div>
+                <label for="favoriteColor">最喜歡的顏色：</label>
+                <input type="color" id="favoriteColor" name="favoriteColor">
+                <div>
+                    <label for="favoriteMonth">最喜歡月份：</label>
+                    <input type="month" id="favoriteMonth" name="favoriteMonth">
+                </div>
+                <div>
+                    <label for="password">密碼</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div>
+                    <label for="join">方便參加線上會員大會時間</label>
+                    <input type="week" name="" id="">
+                    <input type="hidden" id="memberID" value="1">
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>來客製化你的飲料吧!</h3>
+            <form action="">
+                <div>
+                    <p>今晚，我想來點：
+                        <label>
+                            <input type="checkbox" id="drink" value="lemon">
+                            健康檸檬小紫蘇
+                        </label>
+                        <label>
+                            <input type="checkbox" id="drink" value="bubbleMilkTea">
+                            嚼勁黑糖珍珠拿鐵
+                        </label>
+                        <label>
+                            <input type="checkbox" id="drink" value="greenTea">
+                            減肥瘦身無糖綠
+                        </label>
+                    </p>
+                </div>
+                <div>
+                    <label for="ice">冰塊：</label>
+                    去冰
+                    <input type="range" id="ice" name="ice" min="1" max="5">
+                    正常冰
+                </div>
+                <div>
+                    <input type="button" onclick="alert('不能調喔')" value="甜度">
+                </div>
+                <div>
+                    <label for="deliverTime">希望送達時間：</label>
+                    <input type="datetime-local" id="deliverTime" name="deliverTime">
+                </div>
+                <div>
+                    <label for="address">送達地址：</label>
+                    <input type="text" name="address" id="address">
+                </div>                
+                <div>
+                    <label for="gsearch">搜尋加碼優惠</label>
+                    <input type="search" name="gsearch" id="gsearch">
+                </div>
+                <div>
+                    <label for="coupon">優惠碼</label>
+                    <input type="text" name="coupon" id="coupon">
+                </div>
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </section>
+
+    </article>
+</body>
+
+</html>
