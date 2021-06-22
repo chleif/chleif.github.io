@@ -1,0 +1,591 @@
+/* reset  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*realCSS*/
+
+header {
+    position: fixed(1);
+    width: 100%;
+}
+
+.headerHealper {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    display: block;
+    text-align: right;
+}
+
+.headerHealper ul:first-child {
+    border-right: #fff solid 1px;
+}
+
+.headerHealper ul,
+.headerHealper li {
+    margin-top: 5px;
+    justify-content: center;
+    display: inline-block;
+    padding: 0px;
+    margin: 10px;
+}
+
+.headerHealper a {
+    line-height: 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+}
+
+.headerHealper a:hover {
+    color: #0080FF;
+}
+
+.headerService {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    background-color: orange;
+    display: inline-flex;
+}
+
+.headerService img {
+    display: inline-block;
+    width: 150px;
+}
+
+.headerService logo {
+    width: 20%;
+    text-align: right;
+    padding-right: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.headerService ul {
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.headerService li {
+    display: inline-block;
+    margin: 1px;
+    margin-right: 10px;
+}
+
+.headerService li:hover {
+    color: #0080ff;
+}
+
+.headerService li i {
+    font-size: 1px;
+}
+
+.headerButton {
+    width: 20%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.button {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #0066CC;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #004B97;
+}
+
+article {
+    position: relative(2);
+    width: 100%;
+    text-align: center;
+    background-color: brown;
+}
+
+.headerBanner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    display: flex;
+    background-color: #212529;
+    background: url("https://img.shoplineapp.com/media/image_clips/5f069a12dc4d9a00335656c2/original.png?1594268177") no-repeat center/auto 100%;
+}
+
+
+/* .intro {
+    width: 50%;
+    background-color: black;
+} */
+
+.headerBanner img {
+    width: 50%;
+    text-align: center;
+}
+
+.mainServices {
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: left;
+}
+
+.mainServices p {
+    color: gray;
+    text-align: left;
+}
+
+
+/* .mainServices .package {
+    background-color: green;
+    width: 100%;
+    text-align: center;
+} */
+
+.mainServices .package-item {
+    margin-top: 40px;
+    display: inline-block;
+    display: inline-flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-bottom: 1px gray solid;
+}
+
+.mainServices .package-item:last-child {
+    border-bottom: none;
+}
+
+.mainServices .detail {
+    width: 50%;
+    display: inline-block;
+    margin: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.mainServices img {
+    display: inline-block;
+    width: 50%;
+}
+
+.wave {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: orange;
+    font-size: 20px;
+    text-align: left;
+}
+
+.mainServices p {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.mainServices ul {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 30px;
+}
+
+.mainServices li {
+    width: 50%;
+    text-align: left;
+}
+
+.mainServices li i {
+    font-size: 5px;
+    line-height: 20px;
+    background-color: #84C1FF;
+    color: #0072E3;
+    border-radius: 100%;
+}
+
+.mainServices a {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.moreServices {
+    background-color: #E0E0E0;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.moreServices h3 {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.moreServices .package {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.moreServices .package-item {
+    width: 33.33%;
+    margin-bottom: 50px;
+}
+
+.moreServices .circle {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+}
+
+.moreServices img {
+    width: 70%;
+    margin: auto;
+}
+
+.moreServices h4 {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.moreServices .package-item p {
+    font-style: 15px;
+    line-height: 30px;
+    width: 80%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recommend {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-color: black;
+}
+
+.recommend h3 {
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+.recommend span {
+    color: #0066CC;
+}
+
+.recommend-logo {
+    box-sizing: border-box;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+}
+
+.recommend-logo img {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+}
+
+.recommend-detail {
+    width: 80%;
+    padding-left: 10px;
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.recommend-say {
+    width: 40%;
+    text-align: left;
+    line-height: 30px;
+    box-sizing: border-box;
+}
+
+.recommend-say a {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.recommend-say p {
+    height: 200px;
+}
+
+.recommend-say .referrer {
+    text-align: end;
+    color: black;
+}
+
+.recommend-detail img {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+footer {
+    background-color: #04012e;
+}
+
+footer .footerNav {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5px solid #3C3C3C;
+}
+
+.line {
+    display: block;
+    height: 50px;
+    background-color: #04012e;
+}
+
+footer h3 {
+    font-size: 20px;
+    line-height: 100px;
+    font-weight: normal;
+    color: #fff;
+}
+
+footer li {
+    font-size: 15px;
+    line-height: 30px;
+    color: gray;
+}
+
+footer li:hover {
+    color: #fff;
+}
+
+footer .covid19 {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: right;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 0.5px solid #3C3C3C;
+}
+
+footer .covid19 a {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    font-size: 15px;
+    line-height: 30px;
+    color: black;
+    background-color: #ccc;
+}
+
+footer .covid19 a:hover {
+    background-color: #5B5B5B;
+}
+
+.connection {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.connection nav {
+    width: 33.3%;
+    display: inline-block;
+}
+
+.connection li {
+    padding: 0 10px;
+    font-style: 15px;
+    display: inline-block;
+}
+
+.connection li+li {
+    border-left: 1px solid #fff;
+}
+
+.socialCommunity {
+    display: inline-flex;
+}
+
+.socialCommunity .icon {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    justify-content: space-around;
+    background-color: black;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.copyright {
+    color: gray;
+    font-style: 8px;
+    text-align: right;
+}
+
+
+/* .banner{
+    
+    width: 100px;
+    height: 80px;
+} */
