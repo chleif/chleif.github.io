@@ -44,6 +44,8 @@ a {
     color: black;
 }
 
+/*header*/
+
 header {
     position: fixed;
     width: 100%;
@@ -170,6 +172,8 @@ header .headerHealper {
 .button:hover {
     background-color: #004B97;
 }
+
+/*article*/
 
 article {
     padding-top: 110px;
@@ -555,6 +559,8 @@ p {
     text-align: right;
     padding-top: 10%;
 }
+
+/*footer*/
 
 footer {
     background-color: #04012e;
