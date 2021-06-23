@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 </head>
 
@@ -16,9 +17,11 @@
         <wrap class="headerHealper">
             <ul class="langue">
                 <li>
-                    <a href="#">
-                        <i class="fas fa-globe"></i>
-                    </a>
+                    <div class="langueIcon">
+                        <a href="#">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
                 </li>
             </ul>
             <ul>
@@ -88,11 +91,17 @@
     <article>
         <section class="headerBanner">
             <div class="intro">
-                <h1>想在哪開店創業?</h1>
-                <h2>門市必備零售POS系統</h2>
-                <p>超過 25 萬品牌使用！從個人賣家到國際品牌，都能以 SHOPLINE 實現全通路零售，快速拓展市場到世界各地，輕鬆開始你的『 店 』商生意！</p>
-                <input type="email" id="email">
-                <a href="#"><input type="button" value="免費試用"></a>
+                <div class="intro-item">
+                    <h1>想在哪開店創業?</h1>
+                    <h2>門市必備零售POS系統</h2>
+                    <p>超過 25 萬品牌使用！從個人賣家到國際品牌，都能以 SHOPLINE 實現全通路零售，快速拓展市場到世界各地，輕鬆開始你的『 店 』商生意！</p>
+                    <label for="">
+                        <input class="email" type="email" id="email" placeholder="請在此輸入電子信箱(可隨時更換)">
+                    </label>
+                    <a href="#">
+                        <input class="button" type="button" value="免費試用">
+                    </a>
+                </div>
             </div>
             <img src="banner_Pos.png" alt="門市必備零售POS系統">
         </section>
@@ -117,18 +126,18 @@
                             </li>
                             <li>
                                 <i class="fas fa-check"></i> RWD 響應式網頁設計
-                                <li>
-                                    <i class="fas fa-check"></i> 獨有網址 ＆ SSL 安全憑證
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> SEO 搜尋引擎優化
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> 一頁商店
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i> 開放 HTML／CSS 編輯
-                                </li>
+                            <li>
+                                <i class="fas fa-check"></i> 獨有網址 ＆ SSL 安全憑證
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> SEO 搜尋引擎優化
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> 一頁商店
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i> 開放 HTML／CSS 編輯
+                            </li>
                         </ul>
                         <a href="#">看看開店祕技 →</a>
                     </div>
@@ -286,11 +295,21 @@
         <section class="recommend">
             <h3><span>人氣品牌</span>一致推薦使用</h3>
             <wrap class="recommend-logo">
-                <img src="logo_bonnyread.png" alt="Bonny&ReadHomePage">
-                <img src="logo_tuanyuan.png" alt="TuanYuanHomePage">
-                <img src="logo_snatch.png" alt="SnatchHomePage">
-                <img src="logo_excelsior.png" alt="excelsiorHomePage">
-                <img src="logo_lightup.png" alt="naturefruitHomePage">
+                <div class="Bonny">
+                    <span></span>
+                </div>
+                <div class="Tuanyuan">
+                    <img src="logo_tuanyuan.png" alt="">
+                </div>
+                <div class="Snatch">
+                    <img src="logo_snatch.png" alt="">
+                </div>
+                <div class="Excelsior">
+                    <img src="logo_excelsior.png" alt="">
+                </div>
+                <div class="Lightup">
+                    <img src="logo_lightup.png" alt="">
+                </div>
             </wrap>
             <wrap class="recommend-detail">
                 <div class="recommend-say">
@@ -302,9 +321,15 @@
             </wrap>
         </section>
         <section class="footerBanner">
-            <p>全亞洲超過<br> <span>250,000 </span>個品牌都在使用 SHOPLINE</p>
-            <div class="footerBannerButton">
-                <a href="#" class="button">免費試用14天<span>→</span></a>
+            <div class="wrap-text">
+                <p>全亞洲超過<br> <span>250,000 </span>個品牌都在使用 SHOPLINE</p>
+                <div class="footerBannerButton">
+                    <a href="#" class="button">免費試用14天<span>→</span></a>
+                </div>
+            </div>
+            <div class="wrap-img">
+                <img class="lazy loaded" alt="" data-ll-status="loaded"
+                    src="https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820">
             </div>
         </section>
     </article>
@@ -450,7 +475,7 @@
             <a href="#">COVID-19應變措施</a>
         </div>
         <div class="connection">
-            <nav>
+            <nav class="wrap">
                 <ul>
                     <li>
                         <a href="#">網站地圖</a>
@@ -464,36 +489,24 @@
                 </ul>
             </nav>
             <nav class="socialCommunity">
-                <div class="icon">
-                    <a href="#">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="#">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="#">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="#">
-                        <i class="fas fa-comment-dots"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="#">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-comment-dots"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </nav>
             <nav class="copyright">
                 <p>服務時間 星期一至五 上午 10 點至晚上 7 點<br> © Copyright 2013-21 SHOPLINE Limited.</p>

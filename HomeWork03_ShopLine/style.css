@@ -1,86 +1,6 @@
 /* reset  */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -89,20 +9,9 @@ video {
     vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -110,20 +19,15 @@ body {
     line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
     list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
@@ -133,15 +37,19 @@ table {
     border-spacing: 0;
 }
 
-
 /*realCSS*/
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 header {
-    position: fixed(1);
+    position: fixed;
     width: 100%;
 }
 
-.headerHealper {
+header .headerHealper {
     width: 100%;
     height: 50px;
     background-color: black;
@@ -150,12 +58,17 @@ header {
     text-align: right;
 }
 
-.headerHealper ul:first-child {
+.headerHealper .langue {
+    display: inline-block;
+    margin-right: 0;
+}
+
+.headerHealper .langueIcon {
+    padding-right: 20px;
     border-right: #fff solid 1px;
 }
 
-.headerHealper ul,
-.headerHealper li {
+.headerHealper ul, .headerHealper li {
     margin-top: 5px;
     justify-content: center;
     display: inline-block;
@@ -168,17 +81,19 @@ header {
     margin: 0;
     color: #fff;
     font-size: 15px;
+    text-decoration: none;
 }
 
 .headerHealper a:hover {
     color: #0080FF;
+    text-decoration: none;
 }
 
 .headerService {
     width: 100%;
     height: 60px;
     background-color: #fff;
-    background-color: orange;
+    border-bottom: 0.1px solid gray;
     display: inline-flex;
 }
 
@@ -203,8 +118,26 @@ header {
 
 .headerService li {
     display: inline-block;
-    margin: 1px;
+    box-sizing: border-box;
     margin-right: 10px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.headerService li:hover {
+    border-bottom: 3px solid #2828FF;
+}
+
+.headerService li a {
+    color: #4F4F4F;
+}
+
+.headerService li:hover a {
+    color: #2828FF;
+}
+
+.headerService li:hover i {
+    color: black;
 }
 
 .headerService li:hover {
@@ -239,10 +172,9 @@ header {
 }
 
 article {
-    position: relative(2);
+    padding-top: 110px;
     width: 100%;
     text-align: center;
-    background-color: brown;
 }
 
 .headerBanner {
@@ -250,20 +182,78 @@ article {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    display: block;
+    display: inline-block;
     display: flex;
-    background-color: #212529;
     background: url("https://img.shoplineapp.com/media/image_clips/5f069a12dc4d9a00335656c2/original.png?1594268177") no-repeat center/auto 100%;
+    background-size: 100%;
 }
 
+.headerBanner .intro {
+    width: 40%;
+    margin-left: 10%;
+    height: 100%;
+    display: inline-block;
+}
 
-/* .intro {
-    width: 50%;
-    background-color: black;
-} */
+.intro-item {
+    display: inline-block;
+    margin-top: 20%;
+    text-align: left;
+}
+
+h1 {
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+    line-height: 60px;
+}
+
+h2 {
+    color: green;
+    font-size: 30px;
+    text-align: left;
+    line-height: 60px;
+}
+
+.intro-item p {
+    color: #fff;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.email {
+    display: inline-block;
+    height: 30px;
+    width: 60%;
+    font-size: 100%;
+    color: #fff;
+    background: unset;
+    border: none;
+    border-bottom: #fff 1px solid;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #0066CC;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #004B97;
+}
 
 .headerBanner img {
-    width: 50%;
+    width: 40%;
+    margin-right: 10%;
     text-align: center;
 }
 
@@ -275,20 +265,30 @@ h3 {
     font-size: 30px;
     font-weight: bold;
     line-height: 40px;
+}
+
+p {
+    color: gray;
+    text-align: center;
+}
+
+.title p {
+    display: block;
+    box-sizing: border-box;
+    height: 80px;
+    padding-top: 20px;
+    line-height: 60px;
+}
+
+.mainServices .package h3 {
     text-align: left;
 }
 
-.mainServices p {
+.mainServices .package p {
     color: gray;
     text-align: left;
+    line-height: 30px;
 }
-
-
-/* .mainServices .package {
-    background-color: green;
-    width: 100%;
-    text-align: center;
-} */
 
 .mainServices .package-item {
     margin-top: 40px;
@@ -298,6 +298,10 @@ h3 {
     margin-right: 10%;
     width: 80%;
     border-bottom: 1px gray solid;
+}
+
+.package-item .detail {
+    text-align: left;
 }
 
 .mainServices .package-item:last-child {
@@ -356,6 +360,7 @@ h3 {
 .mainServices a {
     display: inline-block;
     margin-top: 30px;
+    color: #0072E3;
 }
 
 .moreServices {
@@ -417,12 +422,6 @@ h3 {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    border-color: black;
-}
-
-.recommend h3 {
-    text-align: center;
-    background-color: blanchedalmond;
 }
 
 .recommend span {
@@ -431,15 +430,34 @@ h3 {
 
 .recommend-logo {
     box-sizing: border-box;
+    height: 150px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.recommend-logo div {
+    width: 20%;
+}
+
+.recommend-logo .Bonny {
+    display: inline-block;
+    background: url("https://img.shoplineapp.com/media/image_clips/5f069a12feeae8003fe59f47/original.png?1594268178") no-repeat center/auto 50%;
+}
+
+.recommend-logo div:hover {
+    border-bottom: 3px solid blue;
+}
+
+.recommend-logo div:active {
+    border-bottom: 3px solid blue;
 }
 
 .recommend-logo img {
     display: inline-block;
-    width: 20%;
+    padding-top: 30px;
     text-align: center;
 }
 
@@ -459,6 +477,8 @@ h3 {
 
 .recommend-say a {
     display: block;
+    color: blue;
+    font-weight: bold;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -476,6 +496,64 @@ h3 {
     width: 60%;
     box-sizing: border-box;
     padding: 1%;
+}
+
+.footerBanner {
+    display: inline-block;
+    display: flex;
+    width: 100%;
+    background-color: #04012e;
+    background: url(https://img.shoplineapp.com/media/image_clips/5f069a1…/original.png?1594268176) no-repeat -450px -55px/auto 360px #172B4D;
+}
+
+.footerBanner .wrap-text {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    padding-left: 20%;
+    padding-top: 80px;
+    height: 300px;
+}
+
+.footerBanner p {
+    text-align: left;
+    font-size: 30px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.footerBanner p span {
+    background: linear-gradient(#172B4D 10%, #0072E3);
+}
+
+.footerBannerButton {
+    display: inline-block;
+    width: 300px;
+}
+
+.footerBannerButton a {
+    width: 100%;
+    text-align: right;
+}
+
+.footerBannerButton span {
+    display: inline-block;
+    width: 30%;
+    margin-right: 5%;
+    text-align: right;
+}
+
+.footerBanner .wrap-img {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.footerBanner img {
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+    padding-top: 10%;
 }
 
 footer {
@@ -507,6 +585,10 @@ footer h3 {
 footer li {
     font-size: 15px;
     line-height: 30px;
+    color: gray;
+}
+
+footer a {
     color: gray;
 }
 
@@ -544,12 +626,12 @@ footer .covid19 a:hover {
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .connection nav {
-    width: 33.3%;
     display: inline-block;
 }
 
@@ -564,17 +646,33 @@ footer .covid19 a:hover {
 }
 
 .socialCommunity {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 400px;
+    margin: 0;
+    font-size: 0;
+    justify-content: space-around;
 }
 
-.socialCommunity .icon {
+.socialCommunity a {
     display: inline-block;
-    color: #fff;
-    text-align: center;
-    justify-content: space-around;
-    background-color: black;
-    padding-top: auto;
-    padding-bottom: auto;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    margin: 0;
+    background-color: #303061;
+    border-radius: 100%;
+}
+
+.socialCommunity a+a {
+    margin-left: 40px;
+}
+
+.socialCommunity i {
+    font-size: 16px;
+    color: rgb(226, 220, 220);
 }
 
 .copyright {
@@ -582,10 +680,3 @@ footer .covid19 a:hover {
     font-style: 8px;
     text-align: right;
 }
-
-
-/* .banner{
-    
-    width: 100px;
-    height: 80px;
-} */
