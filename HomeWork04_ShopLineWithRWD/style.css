@@ -1,0 +1,727 @@
+/* reset  */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*realCSS*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #0066CC;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #004B97;
+}
+
+/*header*/
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+/*headerHealper*/
+
+.headerHealper {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    display: block;
+    text-align: right;
+}
+
+@media screen and (max-width:991px) {
+    .headerHealper {
+        display: none;
+    }
+}
+
+.headerHealper .langue {
+    display: inline-block;
+    margin-right: 0;
+}
+
+.headerHealper .langueIcon {
+    padding-right: 20px;
+    border-right: #fff solid 1px;
+}
+
+.headerHealper ul, .headerHealper li {
+    margin-top: 5px;
+    justify-content: center;
+    display: inline-block;
+    padding: 0px;
+    margin: 10px;
+}
+
+.headerHealper a {
+    line-height: 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.headerHealper a:hover {
+    color: #0080FF;
+    text-decoration: none;
+}
+
+/*headerService*/
+
+.headerService {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 0.1px solid gray;
+    display: inline-flex;
+}
+
+.headerService img {
+    display: inline-block;
+    width: 150px;
+}
+
+.headerService logo {
+    width: 20%;
+    text-align: right;
+    padding-right: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.headerService ul {
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.headerService li {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 10px;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.headerService li:hover {
+    border-bottom: 3px solid #2828FF;
+}
+
+.headerService li a {
+    color: #4F4F4F;
+}
+
+.headerService li:hover a {
+    color: #2828FF;
+}
+
+.headerService li:hover i {
+    color: black;
+}
+
+.headerService li:hover {
+    color: #0080ff;
+}
+
+.headerService li i {
+    font-size: 1px;
+}
+
+@media screen and (max-width:991px) {
+    .headerService ul {
+        display: none;
+    }
+}
+
+.headerButton {
+    width: 20%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media screen and (max-width:991px) {
+    .headerService .button {
+        display: none;
+    }
+}
+
+/*article*/
+
+article {
+    padding-top: 110px;
+    width: 100%;
+    text-align: center;
+}
+
+/*headerBanner*/
+
+.headerBanner {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+    background: url("https://img.shoplineapp.com/media/image_clips/5f069a12dc4d9a00335656c2/original.png?1594268177") no-repeat center/auto 100%;
+    background-size: 100%;
+}
+
+@media screen and (min-width:992px) {
+    .headerBanner {
+        display: flex;
+    }
+    .headerBanner:nth-child(even){
+        flex-direction: rtl;
+    }
+    
+}
+
+.headerBanner img {
+    width: 100%;
+}
+
+.headerBanner .intro {
+    width: 40%;
+    margin-left: 10%;
+    height: 100%;
+    display: inline-block;
+    padding-bottom: 80px;
+}
+
+.intro-item {
+    display: inline-block;
+    margin-top: 20%;
+    text-align: left;
+}
+
+h1 {
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+    line-height: 60px;
+}
+
+h2 {
+    color: green;
+    font-size: 30px;
+    text-align: left;
+    line-height: 60px;
+}
+
+.intro-item p {
+    color: #fff;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.email {
+    display: inline-block;
+    height: 30px;
+    width: 60%;
+    font-size: 100%;
+    color: #fff;
+    background: unset;
+    border: none;
+    border-bottom: #fff 1px solid;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #0066CC;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #004B97;
+}
+
+.headerBanner img {
+    width: 40%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.mainServices {
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+p {
+    color: gray;
+    text-align: center;
+}
+
+.title p {
+    display: block;
+    box-sizing: border-box;
+    height: 80px;
+    padding-top: 20px;
+    line-height: 60px;
+}
+
+.mainServices .package h3 {
+    text-align: left;
+}
+
+.mainServices .package p {
+    color: gray;
+    text-align: left;
+    line-height: 30px;
+}
+
+.mainServices .package-item {
+    margin-top: 40px;
+    display: inline-block;
+    display: inline-flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-bottom: 1px gray solid;
+}
+
+.package-item .detail {
+    text-align: left;
+}
+
+.mainServices .package-item:last-child {
+    border-bottom: none;
+}
+
+.mainServices .detail {
+    width: 50%;
+    display: inline-block;
+    margin: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.mainServices img {
+    display: inline-block;
+    width: 50%;
+}
+
+.wave {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: orange;
+    font-size: 20px;
+    text-align: left;
+}
+
+.mainServices p {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.mainServices ul {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 30px;
+}
+
+.mainServices li {
+    width: 50%;
+    text-align: left;
+}
+
+.mainServices li i {
+    font-size: 5px;
+    line-height: 20px;
+    background-color: #84C1FF;
+    color: #0072E3;
+    border-radius: 100%;
+}
+
+.mainServices a {
+    display: inline-block;
+    margin-top: 30px;
+    color: #0072E3;
+}
+
+.moreServices {
+    background-color: #E0E0E0;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.moreServices h3 {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.moreServices .package {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.moreServices .package-item {
+    width: 33.33%;
+    margin-bottom: 50px;
+}
+
+.moreServices .circle {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+}
+
+.moreServices img {
+    width: 70%;
+    margin: auto;
+}
+
+.moreServices h4 {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.moreServices .package-item p {
+    font-style: 15px;
+    line-height: 30px;
+    width: 80%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recommend {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.recommend span {
+    color: #0066CC;
+}
+
+.recommend-logo {
+    box-sizing: border-box;
+    height: 150px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.recommend-logo div {
+    width: 20%;
+}
+
+.recommend-logo .Bonny {
+    display: inline-block;
+    background: url("https://img.shoplineapp.com/media/image_clips/5f069a12feeae8003fe59f47/original.png?1594268178") no-repeat center/auto 50%;
+}
+
+.recommend-logo div:hover {
+    border-bottom: 3px solid blue;
+}
+
+.recommend-logo div:active {
+    border-bottom: 3px solid blue;
+}
+
+.recommend-logo img {
+    display: inline-block;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.recommend-detail {
+    width: 80%;
+    padding-left: 10px;
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.recommend-say {
+    width: 40%;
+    text-align: left;
+    line-height: 30px;
+    box-sizing: border-box;
+}
+
+.recommend-say a {
+    display: block;
+    color: blue;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.recommend-say p {
+    height: 200px;
+}
+
+.recommend-say .referrer {
+    text-align: end;
+    color: black;
+}
+
+.recommend-detail img {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+.footerBanner {
+    display: inline-block;
+    display: flex;
+    width: 100%;
+    background-color: #04012e;
+    background: url(https://img.shoplineapp.com/media/image_clips/5f069a1…/original.png?1594268176) no-repeat -450px -55px/auto 360px #172B4D;
+}
+
+.footerBanner .wrap-text {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    padding-left: 20%;
+    padding-top: 80px;
+    height: 300px;
+}
+
+.footerBanner p {
+    text-align: left;
+    font-size: 30px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.footerBanner p span {
+    background: linear-gradient(#172B4D 10%, #0072E3);
+}
+
+.footerBannerButton {
+    display: inline-block;
+    width: 300px;
+}
+
+.footerBannerButton a {
+    width: 100%;
+    text-align: right;
+}
+
+.footerBannerButton span {
+    display: inline-block;
+    width: 30%;
+    margin-right: 5%;
+    text-align: right;
+}
+
+.footerBanner .wrap-img {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.footerBanner img {
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+    padding-top: 10%;
+}
+
+/*footer*/
+
+footer {
+    background-color: #04012e;
+}
+
+footer .footerNav {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5px solid #3C3C3C;
+}
+
+.line {
+    display: block;
+    height: 50px;
+    background-color: #04012e;
+}
+
+footer h3 {
+    font-size: 20px;
+    line-height: 100px;
+    font-weight: normal;
+    color: #fff;
+}
+
+footer li {
+    font-size: 15px;
+    line-height: 30px;
+    color: gray;
+}
+
+footer a {
+    color: gray;
+}
+
+footer li:hover {
+    color: #fff;
+}
+
+footer .covid19 {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: right;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 0.5px solid #3C3C3C;
+}
+
+footer .covid19 a {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    font-size: 15px;
+    line-height: 30px;
+    color: black;
+    background-color: #ccc;
+}
+
+footer .covid19 a:hover {
+    background-color: #5B5B5B;
+}
+
+.connection {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.connection nav {
+    display: inline-block;
+}
+
+.connection li {
+    padding: 0 10px;
+    font-style: 15px;
+    display: inline-block;
+}
+
+.connection li+li {
+    border-left: 1px solid #fff;
+}
+
+.socialCommunity {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 400px;
+    margin: 0;
+    font-size: 0;
+    justify-content: space-around;
+}
+
+.socialCommunity a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    margin: 0;
+    background-color: #303061;
+    border-radius: 100%;
+}
+
+.socialCommunity a+a {
+    margin-left: 40px;
+}
+
+.socialCommunity i {
+    font-size: 16px;
+    color: rgb(226, 220, 220);
+}
+
+.copyright {
+    color: gray;
+    font-style: 8px;
+    text-align: right;
+}
