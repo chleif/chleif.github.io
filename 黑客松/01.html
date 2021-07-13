@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="001.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <table>
+        <td>0~100</td>
+    </table>
+
+    <button class="createnumber">產生數字</button>
+    <div class="answer">
+        <input type="">
+    </div>
+    <div class="container">
+        <div class="row cols-3">
+            <div class="btn btn1">
+                <button>1</button>
+            </div>
+            <div class="btn btn2">
+                <button>2</button>
+            </div>
+            <div class="btn btn3">
+                <button>3</button>
+            </div>
+            <div class="btn btn4">
+                <button>4</button>
+            </div>
+            <div class="btn btn5">
+                <button>5</button>
+            </div>
+            <div class="btn btn6">
+                <button>6</button>
+            </div>
+            <div class="btn btn7">
+                <button>7</button>
+            </div>
+            <div class="btn btn8">
+                <button>8</button>
+            </div>
+            <div class="btn btn9">
+                <button>9</button>
+            </div>
+            <div class="btn btnx">
+                <button>X</button>
+            </div>
+            <div class="btn btn0">
+                <button>0</button>
+            </div>
+            <div class="btn btnv">
+                <button>V</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let answer, getanswer;
+
+
+
+        let btnCreateAnswer = document.querySelectorAll("button")[0];
+        console.log(btnCreateAnswer);
+        btnCreateAnswer.onclick = function () {
+            answer = getRandom(100);
+            btnCreateAnswer.onclick="";
+            btnCreateAnswer.innerText="可開始作答";
+            console.log(answer)
+        }
+
+        function getRandom(x) {
+            return Math.floor(Math.random() * x);
+        }
+
+        
+
+        let tempInput = 0;
+        let input = document.querySelector('input');
+        function insertinput(number) {
+            input.innerText(tempInput + 'number');
+        }
+        let btn1 = document.querySelector('.btn1');
+        btn1.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "1"
+                tempInput = 1
+            }
+            else {
+                input.value = tempInput + "1"
+                tempInput = tempInput + "1"
+            }
+        })
+        let btn2 = document.querySelector('.btn2');
+        btn2.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "2"
+                tempInput = 2
+            }
+            else {
+                input.value = tempInput + "2"
+                tempInput = tempInput + "2"
+            }
+        })
+        let btn3 = document.querySelector('.btn3');
+        btn3.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "3"
+                tempInput = 3
+            }
+            else {
+                input.value = tempInput + "3"
+                tempInput = tempInput + "3"
+            }
+        })
+        let btn4 = document.querySelector('.btn4');
+        btn4.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "4"
+                tempInput = 4
+            }
+            else {
+                input.value = tempInput + "4"
+                tempInput = tempInput + "4"
+            }
+        })
+        let btn5 = document.querySelector('.btn5');
+        btn5.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "5"
+                tempInput = 5
+            }
+            else {
+                input.value = tempInput + "5"
+                tempInput = tempInput + "5"
+            }
+        })
+        let btn6 = document.querySelector('.btn6');
+        btn6.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "6"
+                tempInput = 6
+            }
+            else {
+                input.value = tempInput + "6"
+                tempInput = tempInput + "6"
+            }
+        })
+        let btn7 = document.querySelector('.btn7');
+        btn7.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "7"
+                tempInput = 7
+            }
+            else {
+                input.value = tempInput + "7"
+                tempInput = tempInput + "7"
+            }
+        })
+        let btn8 = document.querySelector('.btn8');
+        btn8.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "8"
+                tempInput = 8
+            }
+            else {
+                input.value = tempInput + "8"
+                tempInput = tempInput + "8"
+            }
+        })
+        let btn9 = document.querySelector('.btn9');
+        btn9.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "9"
+                tempInput = 9
+            }
+            else {
+                input.value = tempInput + "9"
+                tempInput = tempInput + "9"
+            }
+        })
+        let btnx = document.querySelector('.btnx');
+        btnx.addEventListener('click', function () {
+            input.value = "";
+            tempInput = 0
+        }
+        )
+        let btn0 = document.querySelector('.btn0');
+        btn0.addEventListener('click', function () {
+            if (tempInput == 0) {
+                input.value = "0"
+                tempInput = 0
+            }
+            else {
+                input.value = tempInput + "0"
+                tempInput = tempInput + "0"
+            }
+        })
+
+        let btnv = document.querySelector('.btnv');
+        btnv.addEventListener('click', function () {
+            if (tempInput == answer) {
+                alert('正解，答案是' + answer);
+            }
+            else {
+                if (tempInput > maxrange) {
+                    console.error(alert('不能大於' + maxrange))
+                }
+                else if (tempInput < minrange) {
+                    console.error(alert('不能小於' + minrange))
+                }
+                else {
+                    changeRange(tempInput);
+                }
+                input.value = "";
+                tempInput = 0;
+            }
+
+        })
+        let maxrange = 100;
+        let minrange = 0;
+        let range = document.querySelector('td');
+        range.innerText = minrange + "~" + maxrange;
+        function changeRange(x) {
+            if (x > answer) {
+                maxrange = x;
+            }
+            else {
+                minrange = x;
+            }
+            range.innerText = minrange + "~" + maxrange;
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

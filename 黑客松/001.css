@@ -1,0 +1,52 @@
+table {
+    width: 50%;
+    height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.createnumber {
+    display: block;
+    width: 20%;    
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    background-color: rgb(121, 193, 226);
+}
+
+.answer {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.btn{
+    display: inline-block;
+    width: 30%;
+}
+.container button{
+    background-color: black;
+    color: white; 
+    width: 100%;  
+}
