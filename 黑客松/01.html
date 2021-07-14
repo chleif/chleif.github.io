@@ -70,8 +70,8 @@
         console.log(btnCreateAnswer);
         btnCreateAnswer.onclick = function () {
             answer = getRandom(100);
-            btnCreateAnswer.onclick="";
-            btnCreateAnswer.innerText="可開始作答";
+            btnCreateAnswer.innerText = "可開始作答";
+            btnCreateAnswer.disabled = true;
             console.log(answer)
         }
 
@@ -79,7 +79,7 @@
             return Math.floor(Math.random() * x);
         }
 
-        
+
 
         let tempInput = 0;
         let input = document.querySelector('input');
@@ -88,102 +88,39 @@
         }
         let btn1 = document.querySelector('.btn1');
         btn1.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "1"
-                tempInput = 1
-            }
-            else {
-                input.value = tempInput + "1"
-                tempInput = tempInput + "1"
-            }
+            numberBtn(1)
         })
         let btn2 = document.querySelector('.btn2');
         btn2.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "2"
-                tempInput = 2
-            }
-            else {
-                input.value = tempInput + "2"
-                tempInput = tempInput + "2"
-            }
+            numberBtn(2)
         })
         let btn3 = document.querySelector('.btn3');
         btn3.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "3"
-                tempInput = 3
-            }
-            else {
-                input.value = tempInput + "3"
-                tempInput = tempInput + "3"
-            }
+            numberBtn(3)
         })
         let btn4 = document.querySelector('.btn4');
         btn4.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "4"
-                tempInput = 4
-            }
-            else {
-                input.value = tempInput + "4"
-                tempInput = tempInput + "4"
-            }
+            numberBtn(4)
         })
         let btn5 = document.querySelector('.btn5');
         btn5.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "5"
-                tempInput = 5
-            }
-            else {
-                input.value = tempInput + "5"
-                tempInput = tempInput + "5"
-            }
+            numberBtn(5)
         })
         let btn6 = document.querySelector('.btn6');
         btn6.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "6"
-                tempInput = 6
-            }
-            else {
-                input.value = tempInput + "6"
-                tempInput = tempInput + "6"
-            }
+            numberBtn(6)
         })
         let btn7 = document.querySelector('.btn7');
         btn7.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "7"
-                tempInput = 7
-            }
-            else {
-                input.value = tempInput + "7"
-                tempInput = tempInput + "7"
-            }
+            numberBtn(7)
         })
         let btn8 = document.querySelector('.btn8');
         btn8.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "8"
-                tempInput = 8
-            }
-            else {
-                input.value = tempInput + "8"
-                tempInput = tempInput + "8"
-            }
+            numberBtn(8)
         })
         let btn9 = document.querySelector('.btn9');
         btn9.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "9"
-                tempInput = 9
-            }
-            else {
-                input.value = tempInput + "9"
-                tempInput = tempInput + "9"
-            }
+            numberBtn(9)
         })
         let btnx = document.querySelector('.btnx');
         btnx.addEventListener('click', function () {
@@ -193,20 +130,17 @@
         )
         let btn0 = document.querySelector('.btn0');
         btn0.addEventListener('click', function () {
-            if (tempInput == 0) {
-                input.value = "0"
-                tempInput = 0
-            }
-            else {
-                input.value = tempInput + "0"
-                tempInput = tempInput + "0"
-            }
+            numberBtn(0)
         })
 
         let btnv = document.querySelector('.btnv');
         btnv.addEventListener('click', function () {
             if (tempInput == answer) {
                 alert('正解，答案是' + answer);
+                btnCreateAnswer.innerText = "產生數字";
+                btnCreateAnswer.disabled = false;
+                input.value = "";
+                tempInput = 0
             }
             else {
                 if (tempInput > maxrange) {
@@ -237,7 +171,16 @@
             range.innerText = minrange + "~" + maxrange;
         }
 
-
+        function numberBtn(btn) {
+            if (tempInput == 0) {
+                input.value = btn + '';
+                tempInput = btn;
+            }
+            else {
+                input.value = tempInput + '' + btn;
+                tempInput = tempInput + '' + btn;
+            }
+        }
 
 
 

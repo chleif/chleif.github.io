@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="02.css">
+    <title>Document</title>
+    <style>
+        .tdhead {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="play">
+        <div class="btnWrap">
+            <button>開始</button>
+            <button>放棄重來</button>
+            <button>看答案</button>
+        </div>
+        <table>
+            <thead>
+                <tr>測試結果</tr>
+            </thead>
+            <tbody id="tryAnswerList"></tbody>
+        </table>
+        <div class="tryAnswerWrap">
+            <span>猜答案</span>
+            <input type="number">
+            <button class="submit">猜!</button>
+        </div>
+    </div>
+    <!-- 待解決 -->
+
+
+
+    <script>
+        let answer, giveUp, getAnswer, tryAnswer, tryAnswerList, input, submit, a, b, answerNum, output;
+        //定義開始按鈕
+        let start = document.querySelectorAll('button')[0];
+        //建立開始方法
+        //產生不重複的4個數字(採用字串array)
+        //透過indexof比對是否有重複
+        start.onclick = function () {
+            answer = createAnswerNumber()
+            start.innerText = "請開始作答";
+            start.disabled = true;
+            getAnswer.disabled = false;
+            giveUp.disabled = false;
+            submit.disabled = false;
+            input.disabled = false;
+        }
+        function createAnswerNumber() {
+            answerNum = '';
+            var n = 0;
+            for (let i = 0; i < 4; i++) {
+                n = getRandom(9);
+                if (answerNum.indexOf(n) == -1) {
+                    answerNum += n + '';
+                }
+                else {
+                    i -= 1;
+                };
+            };
+            console.log(answerNum);
+        };
+        //建立亂數方法
+        function getRandom(x) {
+            return Math.floor(Math.random() * x) + 1
+        }
+        //定義輸入資料範圍
+        input = document.querySelectorAll('input')[0];
+        input.disabled = true;
+
+        //定義輸入按鈕
+        submit = document.querySelectorAll('button')[3];
+        submit.disabled = true;
+        submit.addEventListener('click', function () {
+            tryAnswer = input.value;
+            intJudge(tryAnswer)
+            addTryAnswerResult();
+
+        })
+
+        function intJudge(x) {
+            let inputInt = x;
+            let inputLength = new Set(x);
+
+            if (inputLength.size == 4) {
+                answerJudge(x);
+                input.value = '';
+            }
+            else { alert('請輸入4個不重複的數字') };
+            input.value = '';
+        }
+
+        function answerJudge(x) {
+            a = 0;
+            b = 0;
+            output = '';
+            for (let i = 0; i < 4; i++) {
+                let n = answerNum.indexOf(tryAnswer[i]);
+                if (n != -1) {
+                    if (n == i) {
+                        a++;
+                    }
+                    else {
+                        b++
+                    }
+                }
+            }
+            output = `${a}a${b}b`;
+            if (a == 4) {
+                alert('正解，答案是' + answerNum)
+            }
+        }
+
+        let tbody = document.querySelectorAll('tbody')[0];
+        //每次按下猜紐，新增判斷結果
+        function addTryAnswerResult() {
+            let tr = document.createElement('tr');
+            let tdhead = document.createElement('td');
+            tdhead.classList.add('tdhead')
+            let td = document.createElement('td');
+
+            tdhead.classList.add('btn-group-vertical')
+            tdhead.innerText = output;
+            td.innerText = tryAnswer;
+            tr.appendChild(tdhead);
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+        }
+
+        //放棄重來  待補清空資料方法
+        giveUp = document.querySelectorAll('button')[1];
+        giveUp.disabled = true;
+        giveUp.onclick = function () {
+            tbody.innerHTML = '';
+        }
+
+
+        //看答案
+        getAnswer = document.querySelectorAll('button')
+        [2];
+        getAnswer.disabled = true;
+        getAnswer.onclick = function () {
+            showAnswer()
+        }
+        function showAnswer() {
+            alert('答案是' + answerNum)
+        }
+    </script>
+</body>
+
+</html>
