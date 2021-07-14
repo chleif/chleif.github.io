@@ -7,12 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="02.css">
     <title>Document</title>
-    <style>
-        .tdhead {
-            background-color: red;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -34,9 +28,6 @@
             <button class="submit">猜!</button>
         </div>
     </div>
-    <!-- 待解決 -->
-
-
 
     <script>
         let answer, giveUp, getAnswer, tryAnswer, tryAnswerList, input, submit, a, b, answerNum, output;
@@ -82,8 +73,9 @@
         submit.addEventListener('click', function () {
             tryAnswer = input.value;
             intJudge(tryAnswer)
-            addTryAnswerResult();
-
+            if(a==4){
+                reset()
+            }
         })
 
         function intJudge(x) {
@@ -92,7 +84,8 @@
 
             if (inputLength.size == 4) {
                 answerJudge(x);
-                input.value = '';
+                addTryAnswerResult();
+                input.value = '';                
             }
             else { alert('請輸入4個不重複的數字') };
             input.value = '';
@@ -135,7 +128,17 @@
             tbody.appendChild(tr);
         }
 
-        //放棄重來  待補清空資料方法
+        //答對，重新開始
+        function reset() {
+            tbody.innerHTML = '';
+            start.disabled = false;
+            start.innerText = '開始';
+            getAnswer.disabled = true;
+            giveUp.disabled = true;
+            submit.disabled = true;
+            input.disabled = true;
+        }
+        //放棄重來
         giveUp = document.querySelectorAll('button')[1];
         giveUp.disabled = true;
         giveUp.onclick = function () {
