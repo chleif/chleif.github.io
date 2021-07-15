@@ -44,6 +44,7 @@ input {
 .btn{
     display: inline-block;
     width: 30%;
+    margin-top: 5px;
 }
 .container button{
     background-color: black;
