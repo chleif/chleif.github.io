@@ -3,6 +3,7 @@
     max-width: 800px;
     border: 1px solid gray;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .btnWrap {
