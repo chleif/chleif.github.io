@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/grid.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="index">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="#">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            Mac
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            iPad
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            Watch
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            TV
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            Music
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            支援服務
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            <i class="fas fa-shopping-bag"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerPrice">
+            <span>
+                <a href="#">
+                    <h1>iPhone 12 Pro</h1>
+                </a>
+            </span>
+            <span class="price">NT$33,900 起</span>
+        </div>
+        <div class="loan">
+            <div class="container">
+                <p>
+                    可申請最長達 12 個月的零利率分期付款。
+                    <span><a href="#">進一步了解 <i class="fas fa-chevron-right"></i></a></span>
+                </p>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="wrap">
+            <div class="container">
+                <div class="row .row-cols-2">
+                    <div class="col">
+                        <img class="mainimg" src="iphone-12-pro-blue-hero.png" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="intro">
+                            <p class="orange">全新</p>
+                            <h1>購買iPhone 12 Pro</h1>
+                            <p>以 iPhone 7 或後續機型換購，<br>獲享最高達 NT$2,300 - NT$16,000 折抵優惠**</p>
+                            <p>
+                                <a href="#">
+                                    了解「Apple Trade In
+                                    換購方案」的運作方式
+                                </a>
+                            </p>
+                        </div>
+                        <div class="type">
+                            <p>選擇機型。</p>
+                            <p>
+                                <a href="#">哪一款機型最適合你？</a>
+                            </p>
+                            <button type="button" id="iPhone12Pro">
+                                <p>iPhone 12 Pro<br><span>6.1 吋顯示器¹
+                                    </span></p>
+                                <p>NT$33,900 起</p>
+                            </button>
+                            <button type="button" id="iPhone12ProMax">
+                                <p>iPhone 12 Pro<br><span>6.1 吋顯示器¹
+                                    </span></p>
+                                <p>NT$37,900 起</p>
+                            </button>
+                        </div>
+                        <div class="line"></div>
+                        <div class="exterior">
+                            <p>選擇外觀。</p>
+                            <div class="container">
+                                <button type="button" id="black">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>石墨色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="silver">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>銀色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="gold">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>金色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="blue">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>太平洋藍色</span>
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="capacity">
+                            <p>選擇儲存容量。</p>
+                            <a href="#">你需要多少儲存容量？</a>
+                            <div class="container">
+                                <button type="button" id="s128GB">
+                                    <p>128GB²<br>
+                                        <span id="priceFor128GB">NT$37,900</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="s256GB">
+                                    <p>256GB²<br>
+                                        <span id="priceFor256GB">NT$41,400</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="s512GB">
+                                    <p>512GB²<br>
+                                        <span id="priceFor512GB">NT$48,400</span>
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        let showPrice, mainImg, btnPro, btnProMax, bntBlack, btnSilver, btnGold, btnBlue, btn128G, btn256G, btn512G, price128G, price256G, price512G
+        window.onload = function () {
+            btnPro = document.querySelector("#iPhone12Pro")
+            btnPro.onclick = pro;
+
+            btnProMax = document.querySelector("#iPhone12ProMax")
+            btnProMax.onclick = proMax;
+
+            bntBlack = document.querySelector("#black")
+            bntBlack.disabled = true;
+            bntBlack.onclick = black;
+
+            btnSilver = document.querySelector("#silver")
+            btnSilver.disabled = true;
+            btnSilver.onclick = silver;
+
+            btnGold = document.querySelector("#gold")
+            btnGold.disabled = true;
+            btnGold.onclick = gold;
+
+            btnBlue = document.querySelector("#blue")
+            btnBlue.disabled = true;
+            btnBlue.onclick = blue;
+
+            btn128G = document.querySelector("#s128GB")
+            btn128G.disabled = true;
+            btn128G.onclick = totalPrice128G
+
+            btn256G = document.querySelector("#s256GB")
+            btn256G.disabled = true;
+            btn256G.onclick = totalPrice256G
+
+            btn512G = document.querySelector("#s512GB")
+            btn512G.disabled = true;
+            btn512G.onclick = totalPrice512G
+
+            showPrice = document.querySelector(".price");
+            price128G = document.querySelector("#priceFor128GB");
+            price256G = document.querySelector("#priceFor256GB");
+            price512G = document.querySelector("#priceFor512GB");
+            mainImg = document.querySelector(".mainimg");
+        }
+        function imgsrc(type, color) {
+            return `iphone-12-${type}-${color}-hero.png`
+        }
+        function pro() {
+            openExterior();
+            mainImg.src = "iphone-12-pro-family-hero-all.jpg";
+            price128G.innerText = "NT$33,900"
+            price256G.innerText = "NT$37,400"
+            price512G.innerText = "NT$44,000"
+        }
+        function proMax() {
+            openExterior();
+            mainImg.src = "iphone-12-pro-max-family-hero-all.jpg";
+            price128G.innerText = "NT$37,900";
+            price256G.innerText = "NT$41,400";
+            price512G.innerText = "NT$48,400";
+        }
+        function black() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "graphite");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "graphite");
+            }
+        }
+        function silver() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "silver");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "silver");
+            }
+        }
+        function gold() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "gold");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "gold");
+            }
+        }
+        function blue() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "blue");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "blue");
+            }
+        }
+        //調整總價
+        function totalPrice128G() {
+            showPrice.innerText = price128G.innerText;
+        }
+        function totalPrice256G() {
+            showPrice.innerText = price256G.innerText;
+        }
+        function totalPrice512G() {
+            showPrice.innerText = price512G.innerText;
+        }
+
+
+
+        //可使用外觀按鈕
+        function openExterior() {
+            bntBlack.disabled = false;
+            btnSilver.disabled = false;
+            btnGold.disabled = false;
+            btnBlue.disabled = false;
+        }
+
+        //可使用容量按鈕
+        function openCapacity() {
+            btn128G.disabled = false;
+            btn256G.disabled = false;
+            btn512G.disabled = false;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+* {
+    text-decoration: none;
+}
+
+a {
+    color: rgb(21, 141, 211)
+}
+a:hover{
+    text-decoration:rgb(21, 141, 211) ;
+}
+
+
+/* header */
+
+/* header-index */
+
+.index {
+    background-color: black;
+    width: 100%;
+}
+
+.index .container {
+    max-width: 1200px;
+}
+
+.index .row {
+    text-align: center;
+    justify-content: space-around;
+}
+
+.index .col {
+    padding: 0;
+}
+
+.index a {
+    line-height: 30px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.829);
+    font-size: 14px;
+}
+
+.index a:hover {
+    color: white;
+}
+
+/* header-headerPrice */
+
+.headerPrice {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerPrice a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* header-loan */
+
+.loan {
+    background-color: #ccc;
+    width: 100%;
+}
+
+.loan .container {
+    display: block;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #ccc;
+}
+
+.loan .container p {
+    line-height: 40px;
+    font-size: 10px;
+}
+
+.loan .container a, .loan .container i {
+    color: rgb(21, 141, 211);
+}
+
+/* article */
+
+/* article-wrap */
+
+article {
+    width: 100%;
+}
+
+article .wrap {
+    display: block;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+article .container .col {
+    width: 50%;
+}
+
+.line {
+    border: 1px solid #ccc;
+    width: 60%;
+    margin: 10px 0px;
+}
+img{
+    width: 100%;
+}
+/* article-intro */
+
+.intro {
+    margin-top: 40px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.intro .orange {
+    color: rgb(179, 52, 6);
+}
+
+.intro h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+/* article-type */
+
+.type {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.type button {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin: 5px 0;
+}
+.type button:hover{
+    border: 1px solid black;
+}
+.type button p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* article-exterior */
+
+.exterior {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 60%;
+}
+
+.exterior .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.exterior button {
+    width: 48%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin: 5px 1%;
+    justify-content: center;
+}
+.exterior button:hover{
+    border: 1px solid black;
+}
+.exterior button i, .exterior button p {
+    display: block;
+}
+
+.exterior button i {
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+
+#black i {
+    color: #1d1d1f;
+}
+
+#silver i {
+    color: silver;
+}
+
+#gold i {
+    color: rgb(223, 175, 73);
+}
+
+#blue i {
+    color: rgba(7, 7, 97, 0.705);
+}
+
+/* article-capacity */
+
+.capacity {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 60%;
+}
+
+.capacity .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.capacity button {
+    font-size: 25px;
+    font-weight: bold;
+}
+.capacity button:hover{
+    border: 1px solid black;
+}
+.capacity button span {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.capacity button {
+    width: 48%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin: 5px 1%;
+    justify-content: center;
+}
