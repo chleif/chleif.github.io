@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/grid.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="index">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="#">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            Mac
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            iPad
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            Watch
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            TV
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            Music
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            支援服務
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            <i class="fas fa-shopping-bag"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerPrice">
+            <span>
+                <a href="#">
+                    <h1>iPhone Air</h1>
+                </a>
+            </span>
+            <span class="price">NT$33,900 起</span>
+        </div>
+        <div class="loan">
+            <div class="container">
+                <p>以教育優惠為大專生活買 iPad 優惠組合，內含 AirPods***。
+                    <span><a href="#">立即選購 <i class="fas fa-chevron-right"></i></a></span>
+                </p>
+                <p>
+                    可申請最長達 12 個月的零利率分期付款。
+                    <span><a href="#">進一步了解 <i class="fas fa-chevron-right"></i></a></span>
+                </p>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="wrap">
+            <div class="container">
+                <div class="row .row-cols-2">
+                    <div class="col">
+                        <img class="mainimg" src="ipad-air-select-cell-gold-202009.png" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="intro">
+                            <h1>購買 iPad Air</h1>
+                        </div>
+                        <div class="exterior">
+                            <h4>外觀</h4>
+                            <div class="container">
+                                <button type="button" id="gray">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>太空灰色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="silver">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>銀色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="pink">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>玫瑰金色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="green">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>綠色</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="blue">
+                                    <p>
+                                        <i class="fas fa-circle"></i>
+                                        <span>天藍色</span>
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="capacity">
+                            <h4>儲存裝置。</h4>
+                            <div class="container">
+                                <button type="button" id="s64GB">
+                                    <p>64GB¹<br>
+                                        <span id="priceFor64GB">NT$18,900 起</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="s256GB">
+                                    <p>256GB¹<br>
+                                        <span id="priceFor256GB">NT$23,900 起</span>
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="connect">
+                            <h4>儲存裝置。</h4>
+                            <div class="container">
+                                <button type="button" id="WiFi">
+                                    <p>Wi-Fi<br>
+                                        <span id="priceFor64GB">NT$18,900 起</span>
+                                    </p>
+                                </button>
+                                <button type="button" id="mobile">
+                                    <p>256GB¹<br>
+                                        <span id="priceFor256GB">NT$23,200起</span>
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="total">
+                            <h3 id="totalPrice">NT$</h3>
+                            <p id="tax">含營業稅和其他法定稅費：約 NT$。*
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        let showPrice, mainImg, btnPro, btnProMax, bntBlack, btnSilver, btnGold, btnBlue, btn128G, btn256G, btn512G, price128G, price256G, price512G
+        window.onload = function () {
+            btnPro = document.querySelector("#iPhone12Pro")
+            btnPro.onclick = pro;
+
+            btnProMax = document.querySelector("#iPhone12ProMax")
+            btnProMax.onclick = proMax;
+
+            bntBlack = document.querySelector("#black")
+            bntBlack.disabled = true;
+            bntBlack.onclick = black;
+
+            btnSilver = document.querySelector("#silver")
+            btnSilver.disabled = true;
+            btnSilver.onclick = silver;
+
+            btnGold = document.querySelector("#gold")
+            btnGold.disabled = true;
+            btnGold.onclick = gold;
+
+            btnBlue = document.querySelector("#blue")
+            btnBlue.disabled = true;
+            btnBlue.onclick = blue;
+
+            btn128G = document.querySelector("#s128GB")
+            btn128G.disabled = true;
+            btn128G.onclick = totalPrice128G
+
+            btn256G = document.querySelector("#s256GB")
+            btn256G.disabled = true;
+            btn256G.onclick = totalPrice256G
+
+            btn512G = document.querySelector("#s512GB")
+            btn512G.disabled = true;
+            btn512G.onclick = totalPrice512G
+
+            showPrice = document.querySelector(".price");
+            price128G = document.querySelector("#priceFor128GB");
+            price256G = document.querySelector("#priceFor256GB");
+            price512G = document.querySelector("#priceFor512GB");
+            mainImg = document.querySelector(".mainimg");
+        }
+        function imgsrc(type, color) {
+            return `iphone-12-${type}-${color}-hero.png`
+        }
+        function pro() {
+            openExterior();
+            mainImg.src = "iphone-12-pro-family-hero-all.jpg";
+            price128G.innerText = "NT$33,900"
+            price256G.innerText = "NT$37,400"
+            price512G.innerText = "NT$44,000"
+        }
+        function proMax() {
+            openExterior();
+            mainImg.src = "iphone-12-pro-max-family-hero-all.jpg";
+            price128G.innerText = "NT$37,900";
+            price256G.innerText = "NT$41,400";
+            price512G.innerText = "NT$48,400";
+        }
+        function black() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "graphite");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "graphite");
+            }
+        }
+        function silver() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "silver");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "silver");
+            }
+        }
+        function gold() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "gold");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "gold");
+            }
+        }
+        function blue() {
+            openCapacity()
+            if (btnPro.onclick) {
+                mainImg.src = imgsrc("pro", "blue");
+            }
+            if (btnProMax) {
+                mainImg.src = imgsrc("pro-max", "blue");
+            }
+        }
+        //調整總價
+        function totalPrice128G() {
+            showPrice.innerText = price128G.innerText;
+        }
+        function totalPrice256G() {
+            showPrice.innerText = price256G.innerText;
+        }
+        function totalPrice512G() {
+            showPrice.innerText = price512G.innerText;
+        }
+
+
+
+        //可使用外觀按鈕
+        function openExterior() {
+            bntBlack.disabled = false;
+            btnSilver.disabled = false;
+            btnGold.disabled = false;
+            btnBlue.disabled = false;
+        }
+
+        //可使用容量按鈕
+        function openCapacity() {
+            btn128G.disabled = false;
+            btn256G.disabled = false;
+            btn512G.disabled = false;
+        }
+
+    </script>
+
+</body>
+
+</html>
