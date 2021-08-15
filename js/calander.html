@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 id="year-month">0000年 - 00月</h1>
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>日</th>
+                <th>一</th>
+                <th>二</th>
+                <th>三</th>
+                <th>四</th>
+                <th>五</th>
+                <th>六</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 日期動態渲染 -->
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" onclick="PreMonth()">上個月</button>
+    <button class="btn btn-primary" onclick="NextMonth()">下個月</button>
+
+    <!--新增行程 Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">新增行程</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="date" readonly>
+                    <input type="text" id="todo-item">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addTodoItem()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 修改行程modal -->
+    <div class="modal fade" id="modifyModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">修改行程</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="modify-date" readonly>
+                    <input type="text" id="modify-todo-item">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="deleteTodoItem()">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="editTodoItem()">Modify</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+    <script>
+        //今天
+        let today = new Date();
+        //年、月、日
+        let year = today.getFullYear();
+        let month = today.getMonth();
+        let date = today.getDate();
+
+        //目前修改的行程索引
+        let curentIndex;
+
+        //動態製作
+        function Init() {
+            //tbody
+            let tbody = document.querySelector('tbody');
+            tbody.innerText = '';
+
+            document.querySelector('#year-month').innerText = `${year}年 - ${month + 1}月`
+
+            //抓出1號是禮拜幾
+            let firstDay = new Date(year, month, 1).getDay();
+            let preFirstDay = new Date(year, month, 0).getDay();
+            console.log(firstDay);
+            console.log(preFirstDay);
+
+            //這個月有幾天
+            let dayOfMonth = new Date(year, month + 1, 0).getDate();
+            // console.log(dayOfMonth);
+
+            //每個月第一天都是1號
+            let day = 1;
+
+            //需要幾個tr
+            let rows = Math.ceil((dayOfMonth + firstDay) / 7);
+            // console.log(row);
+
+            for (let row = 0; row < rows; row++) {
+                let tr = document.createElement('tr');
+                for (let col = 0; col < 7; col++) {
+                    let td = document.createElement('td');
+                    //每月第一周處理
+                    if (row == 0 && col < firstDay) {
+                        //上個月的欄位
+                    }
+                    //第二行及以後
+                    else {
+                        if (day <= dayOfMonth) {
+                            //這個月
+                            td.innerText = day;
+
+                            //如果localStorage取資料有行程
+                            if (localStorage.getItem(`${year}-${month + 1}-${day}`) != null) {
+                                let todoList = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${day}`));
+
+                                let ul = document.createElement('ul');
+
+                                todoList.forEach((item, index) => {
+                                    let li = document.createElement('li')
+                                    li.innerText = item.title;
+                                    //修改用的modal
+                                    li.addEventListener('click', function (event) {
+                                        bootstrap.Modal.getOrCreateInstance(document.getElementById('modifyModal')).show();
+                                        curentIndex = index;
+                                        //offsetParent
+                                        document.querySelector('#modify-date').value = `${year}-${month + 1}-${event.target.offsetParent.childNodes[0].data}`
+
+                                        document.querySelector('#modify-todo-item').value = item.title;
+
+                                        event.stopPropagation();
+                                    })
+                                    ul.appendChild(li);
+                                })
+                                td.appendChild(ul);
+                            }
+
+                            td.addEventListener('click', function (event) {
+                                let target;
+                                if (event.target.localName == 'td') {
+                                    target = event.target;
+                                }
+                                bootstrap.Modal.getOrCreateInstance(document.getElementById('addModal')).show();
+                                document.querySelector('#date').value = `${year}-${month + 1}-${target.childNodes[0].data}`
+                            });
+                        } else {
+                            //下個月
+                            td.innerText = ''
+                        }
+                        day++;
+                    }
+                    tr.appendChild(td);
+                }
+                tbody.append(tr);
+            }
+        }
+
+        Init();
+        //下個月
+        function NextMonth() {
+            month++;
+            if (month > 11) {
+                month = 0;
+                year++;
+            }
+            Init();
+        }
+
+
+        //上個月
+        function PreMonth() {
+            month--;
+            if (month < 0) {
+                month = 11;
+                year--;
+            }
+            Init();
+        }
+
+        //新增行程
+        function addTodoItem() {
+            let date = document.querySelector('#date').value;
+            let todoItem = document.querySelector('#todo-item').value;
+
+            let todoObject = {
+                title: todoItem
+            }
+            let todoList = [];
+            //如果還沒有行程=>可以直接加
+            if (localStorage.getItem(date) == null) {
+                todoList.push(todoObject);
+            }
+            //如果已經有行程，需要先拉出來，localstorage的內容才不會被覆蓋
+            else {
+                todoList = JSON.parse(localStorage.getItem(date));
+                todoList.push(todoObject);
+            }
+
+            localStorage.setItem(date, JSON.stringify(todoList));
+            Init();
+        }
+
+        //修改行程
+        function editTodoItem() {
+            let date = document.querySelector('#modify-date').value;
+            let todoItem = document.querySelector('#modify-todo-item').value;
+
+            let todoList = JSON.parse(localStorage.getItem(date));
+            todoList[curentIndex] = { title: todoItem };
+
+            localStorage.setItem(date, JSON.stringify(todoList));
+
+            Init();
+        }
+        //刪除行程
+        function deleteTodoItem() {
+            let date = document.querySelector('#modify-date').value;
+
+            let todoList = JSON.parse(localStorage.getItem(date));
+            todoList.splice(curentIndex, 1);
+
+            localStorage.setItem(date, JSON.stringify(todoList));
+
+            Init();
+        }
+    </script>
+</body>
+
+</html>

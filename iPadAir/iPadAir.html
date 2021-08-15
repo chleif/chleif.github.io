@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+        div .select {
+            border: 5px solid blue;
+        }
+    </style>
 </head>
 
 <body>
@@ -91,7 +96,7 @@
             <div class="container">
                 <div class="row .row-cols-2">
                     <div class="col">
-                        <img class="mainimg" src="ipad-air-select-cell-gold-202009.png" alt="">
+                        <img id="mainimg" src="ipad-air-select-202009.jpg" alt="">
                     </div>
                     <div class="col">
                         <div class="intro">
@@ -149,23 +154,23 @@
                         </div>
                         <div class="line"></div>
                         <div class="connect">
-                            <h4>儲存裝置。</h4>
+                            <h4>連線能力</h4>
                             <div class="container">
                                 <button type="button" id="WiFi">
                                     <p>Wi-Fi<br>
-                                        <span id="priceFor64GB">NT$18,900 起</span>
+                                        <span id="priceForWifi">NT$23,900起</span>
                                     </p>
                                 </button>
                                 <button type="button" id="mobile">
-                                    <p>256GB¹<br>
-                                        <span id="priceFor256GB">NT$23,200起</span>
+                                    <p>Wi-Fi+行動網路<br>
+                                        <span id="priceForNetwork">NT$23,200起</span>
                                     </p>
                             </div>
                         </div>
                         <div class="line"></div>
                         <div class="total">
                             <h3 id="totalPrice">NT$</h3>
-                            <p id="tax">含營業稅和其他法定稅費：約 NT$。*
+                            <p>含營業稅和其他法定稅費：約 NT$ <span id="tax"></span> 。*
                             </p>
                         </div>
                     </div>
@@ -174,132 +179,175 @@
         </div>
     </article>
 
-
+    <!-- 全域變數&生成DOMNODE -->
     <script>
-        let showPrice, mainImg, btnPro, btnProMax, bntBlack, btnSilver, btnGold, btnBlue, btn128G, btn256G, btn512G, price128G, price256G, price512G
-        window.onload = function () {
-            btnPro = document.querySelector("#iPhone12Pro")
-            btnPro.onclick = pro;
+        let url, mainImg, btnGray, btnSilver, btnPink, btnGreen, btnBlue, btn64GB, btn256GB, btnWIFI, btnNetwork, price, priceFor64GB, priceFor256GB, priceForWIFI, priceForNetwork, totalPrice, tax, color, storage, network, ipadAirArray;
 
-            btnProMax = document.querySelector("#iPhone12ProMax")
-            btnProMax.onclick = proMax;
+        mainImg = document.querySelector('#mainimg');
+        // console.log(mainImg);
+        btnGray = document.querySelector('#gray');
+        btnSilver = document.querySelector('#silver');
+        btnPink = document.querySelector('#pink');
+        btnGreen = document.querySelector('#green');
+        btnBlue = document.querySelector('#blue');
+        // console.log(btnGray);
+        // console.log(btnSilver);
+        // console.log(btnPink);
+        // console.log(btnGreen);
+        // console.log(btnBlue);
+        btn64GB = document.querySelector('#s64GB');
+        btn256GB = document.querySelector('#s256GB');
+        // console.log(btn64GB);
+        // console.log(btn256BG);
+        btnWIFI = document.querySelector('#WiFi');
+        btnNetwork = document.querySelector('#mobile');
+        // console.log(btnWIFI);
+        // console.log(btnNetwork);
+        price = document.querySelector('.price');
+        priceFor64GB = document.querySelector('#priceFor64GB');
+        priceFor256GB = document.querySelector('#priceFor256GB');
+        priceForWIFI = document.querySelector('#priceForWifi');
+        priceForNetwork = document.querySelector('#priceForNetwork');
+        totalPrice = document.querySelector('#totalPrice');
+        tax = document.querySelector('#tax');
+        // console.log(price);
+        // console.log(priceFor64GB);
+        // console.log(priceFor256GB);
+        // console.log(priceForWIFI);
+        // console.log(priceForNetwork);
+        // console.log(totalPrice);
+        // console.log(tax);
+    </script>
 
-            bntBlack = document.querySelector("#black")
-            bntBlack.disabled = true;
-            bntBlack.onclick = black;
-
-            btnSilver = document.querySelector("#silver")
-            btnSilver.disabled = true;
-            btnSilver.onclick = silver;
-
-            btnGold = document.querySelector("#gold")
-            btnGold.disabled = true;
-            btnGold.onclick = gold;
-
-            btnBlue = document.querySelector("#blue")
-            btnBlue.disabled = true;
-            btnBlue.onclick = blue;
-
-            btn128G = document.querySelector("#s128GB")
-            btn128G.disabled = true;
-            btn128G.onclick = totalPrice128G
-
-            btn256G = document.querySelector("#s256GB")
-            btn256G.disabled = true;
-            btn256G.onclick = totalPrice256G
-
-            btn512G = document.querySelector("#s512GB")
-            btn512G.disabled = true;
-            btn512G.onclick = totalPrice512G
-
-            showPrice = document.querySelector(".price");
-            price128G = document.querySelector("#priceFor128GB");
-            price256G = document.querySelector("#priceFor256GB");
-            price512G = document.querySelector("#priceFor512GB");
-            mainImg = document.querySelector(".mainimg");
+    <!-- 更換圖片 -->
+    <script>
+        //更換圖片
+        function imgsrc(color) {
+            return `ipad-air-select-cell-${color}-202009.png`
         }
-        function imgsrc(type, color) {
-            return `iphone-12-${type}-${color}-hero.png`
-        }
-        function pro() {
-            openExterior();
-            mainImg.src = "iphone-12-pro-family-hero-all.jpg";
-            price128G.innerText = "NT$33,900"
-            price256G.innerText = "NT$37,400"
-            price512G.innerText = "NT$44,000"
-        }
-        function proMax() {
-            openExterior();
-            mainImg.src = "iphone-12-pro-max-family-hero-all.jpg";
-            price128G.innerText = "NT$37,900";
-            price256G.innerText = "NT$41,400";
-            price512G.innerText = "NT$48,400";
-        }
-        function black() {
-            openCapacity()
-            if (btnPro.onclick) {
-                mainImg.src = imgsrc("pro", "graphite");
-            }
-            if (btnProMax) {
-                mainImg.src = imgsrc("pro-max", "graphite");
-            }
+        function gray() {
+            mainImg.src = imgsrc('spacegray');
+            color = '太空灰色';
         }
         function silver() {
-            openCapacity()
-            if (btnPro.onclick) {
-                mainImg.src = imgsrc("pro", "silver");
-            }
-            if (btnProMax) {
-                mainImg.src = imgsrc("pro-max", "silver");
-            }
+            mainImg.src = imgsrc('silver');
+            color = '銀色';
         }
-        function gold() {
-            openCapacity()
-            if (btnPro.onclick) {
-                mainImg.src = imgsrc("pro", "gold");
-            }
-            if (btnProMax) {
-                mainImg.src = imgsrc("pro-max", "gold");
-            }
+        function pink() {
+            mainImg.src = imgsrc('gold');
+            color = '玫瑰金色';
+        }
+        function green() {
+            mainImg.src = imgsrc('green');
+            color = '綠色';
         }
         function blue() {
-            openCapacity()
-            if (btnPro.onclick) {
-                mainImg.src = imgsrc("pro", "blue");
-            }
-            if (btnProMax) {
-                mainImg.src = imgsrc("pro-max", "blue");
-            }
+            mainImg.src = imgsrc('blue');
+            color = '天藍色';
         }
-        //調整總價
-        function totalPrice128G() {
-            showPrice.innerText = price128G.innerText;
+        function removeSelectInColor() {
+            btnGray.classList.remove('select');
+            btnSilver.classList.remove('select');
+            btnPink.classList.remove('select');
+            btnGreen.classList.remove('select');
+            btnBlue.classList.remove('select');
         }
-        function totalPrice256G() {
-            showPrice.innerText = price256G.innerText;
-        }
-        function totalPrice512G() {
-            showPrice.innerText = price512G.innerText;
-        }
-
-
-
-        //可使用外觀按鈕
-        function openExterior() {
-            bntBlack.disabled = false;
-            btnSilver.disabled = false;
-            btnGold.disabled = false;
-            btnBlue.disabled = false;
-        }
-
-        //可使用容量按鈕
-        function openCapacity() {
-            btn128G.disabled = false;
-            btn256G.disabled = false;
-            btn512G.disabled = false;
-        }
+        btnGray.addEventListener('click', function () {
+            removeSelectInColor();
+            btnGray.classList.add('select');
+            gray();
+        })
+        btnSilver.addEventListener('click', function () {
+            removeSelectInColor();
+            btnSilver.classList.add('select');
+            silver();
+        })
+        btnPink.addEventListener('click', function () {
+            removeSelectInColor();
+            btnPink.classList.add('select');
+            pink();
+        })
+        btnGreen.addEventListener('click', function () {
+            removeSelectInColor();
+            btnGreen.classList.add('select');
+            green();
+        })
+        btnBlue.addEventListener('click', function () {
+            removeSelectInColor();
+            btnBlue.classList.add('select');
+            blue();
+        })
 
     </script>
+
+    <!-- 儲存空間 -->
+    <script>
+        btn64GB.addEventListener('click', function () {
+            btn64GB.classList.add('select');
+            btn256GB.classList.remove('select');
+            storage = '64GB';
+            console.log(storage);
+        })
+        btn256GB.addEventListener('click', function () {
+            btn256GB.classList.add('select');
+            btn64GB.classList.remove('select');
+            storage = '256GB';
+            console.log(storage);
+        })
+    </script>
+
+    <!-- 連線能力 -->
+    <script>
+        btnWIFI.addEventListener('click', function () {
+            btnWIFI.classList.add('select');
+            btnNetwork.classList.remove('select');
+            network = 'Wi-Fi';
+            console.log(network);
+            changePrice();
+        })
+        btnNetwork.addEventListener('click', function () {
+            btnNetwork.classList.add('select');
+            btnWIFI.classList.remove('select');
+            network = 'Cellular';
+            console.log(network);
+            changePrice();
+        })
+    </script>
+
+    <script>
+        function changePrice() {
+            fetch(url)
+                .then(response => response.json())
+                .then(result => {
+                    ipadAirArray = result;
+                    let useprice = ipadAirArray.filter(ipad => {
+                        ipad.color == color && ipad.storage == storage && ipad.network == network;
+                        console.log(useprice)
+                    })
+                });
+        }
+    </script>
+    <script>
+        url = "https://raw.githubusercontent.com/chleif/FileStorage/main/iPadAir.json";
+
+
+
+
+        //調整總價
+        // function totalPrice128G() {
+        //     showPrice.innerText = price128G.innerText;
+        // }
+        // function totalPrice256G() {
+        //     showPrice.innerText = price256G.innerText;
+        // }
+        // function totalPrice512G() {
+        //     showPrice.innerText = price512G.innerText;
+        // }
+
+
+    </script>
+
+
 
 </body>
 
