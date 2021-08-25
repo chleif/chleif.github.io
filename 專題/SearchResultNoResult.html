@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchResultNoResult</title>
+    <!-- bootstrap4.6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+        .container {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        .container .text-small{
+            font-size: 26px;
+        }
+
+        .btn-half-block {
+            width: 50%;
+        }
+
+        .btn-half-block a {
+            color: white;
+        }
+        .container img{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>帶入共同layout</header>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <img class="" src="https://picsum.photos/200/200/?random=1">
+            </div>
+            <p class="col-12 display-4">找不到符合</p>
+            <p id="searchText" class="col-12 display-4">「XX」</p>
+            <p class="col-12 display-4">的項目</p>
+            <p class="col-12 text-small">請改為搜尋其他項目</p>
+            <div class="col-12">
+                <button id="seeAllResyaurant" type="button " class="btn btn-dark btn-lg btn-half-block">
+                    <a href="#">查看所有餐廳</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <footer>帶入共同layout</footer>
+
+    <script>
+        //查看所有餐廳按鈕
+        //id="seeAllResyaurant"
+        let btnSeeAllResyaurant = document.querySelector("#seeAllResyaurant");
+        console.log(btnSeeAllResyaurant);
+        // 搜尋字串
+        //id="searchText"
+        let searchText = document.querySelector("#searchText");
+        console.log(searchText);
+    </script>
+</body>
+
+</html>

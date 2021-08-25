@@ -329,6 +329,13 @@
     </script>
     <script>
         url = "https://raw.githubusercontent.com/chleif/FileStorage/main/iPadAir.json";
+        fetch(url)
+        .then(request=>request.json())
+        .then(result=>{
+            // console.log(Array.isArray(result));
+            // 0: {id: "A001", color: "太空灰色", price: 18900, storage: "64GB", network: "Wi-Fi", …}
+            console.log(result);
+        })
 
 
 
