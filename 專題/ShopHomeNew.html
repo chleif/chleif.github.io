@@ -1,3 +1,4 @@
+<!-- 有問題需處理 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,13 +49,13 @@
             <div class="menu">
                 <div class="menuLogo py-4 border-bottom"><img src="https://picsum.photos/60/30/?random=1"></div>
                 <div class="function">
-                    <div class="">餐點訊息狀況</div>
-                    <div class="">營業時間</div>
-                    <div class="">訂單支援</div>
-                    <div class="">客服中心</div>
-                    <div class="">課服訊息</div>
-                    <div class="">操作指南</div>
-                    <div class="">設定</div><!-- 可能要刪掉 -->
+                    <button class="btn border-0" data-toggle="modal" data-target="#mealDetailModal">餐點訊息狀況</button>
+                    <button class="btn border-0">營業時間</button>
+                    <button class="btn border-0">訂單支援</button>
+                    <button class="btn border-0">客服中心</button>
+                    <button class="btn border-0">課服訊息</button>
+                    <button class="btn border-0">操作指南</button>
+                    <button class="btn border-0">設定</button>
                 </div>
                 <div class="switch">
                     <button class="btn btn-dark d-block w-100 mb-2">我想要訂餐</button>
@@ -92,8 +93,7 @@
                     </div>
                 </div>
                 <!-- 已暫停提示 -->
-                <!-- display: none無效 -->
-                <div class="pauseTimeInMenu d-flex">
+                <div class="pauseTimeInMenu">
                     <div>
                         <i class="fas fa-pause"></i>
                     </div>
@@ -126,6 +126,28 @@
         <!-- 主頁面關閉按鈕 -->
     </div>
 
+    <!-- 選單Modal區 -->
+    <!-- 餐點訊息Modal -->
+    <div class="modal fade" id="mealDetailModal" tabindex="-1" role="dialog" aria-labelledby="mealDetailTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mealDetailTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 聯絡支援Modal -->
     <div class="modal fade" id="connectionModal" tabindex="-1" aria-labelledby="connectionModalLabel"
@@ -219,10 +241,9 @@
             <div class="modal-content">
                 <div class="modal-header border-0">
                     <h5 class="modal-title " id="pauseReasonModal">暫停接受新訂單</h5>
-                    <!-- 換行? -->
-                    <p class="d-">請選取暫停原因</p>
                 </div>
                 <div class="modal-body">
+                    <p class="d-">請選取暫停原因</p>
                     <div class="btn-group btn-group-lg" role="group" aria-label="pauseReasonModalLabel">
                         <button type="button" id="pauseReason-closeEraly" class="btn btn-secondary align-self-center">
                             提早打烊
@@ -238,9 +259,7 @@
                             其他
                         </button>
                     </div>
-                </div>
-                <div>
-                    detail
+                    <input type="text" value="還需補充其他資訊嗎？" id="pauseReason-detail">
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">取消</button>
@@ -275,6 +294,9 @@
         </div>
     </div>
 
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -287,7 +309,7 @@
         let body = document.querySelector('body');
         console.log(body)
 
-        //加入menu背景
+        //按下漢堡後，加入menu背景
         menuCheck.addEventListener('click', function () {
             //若漢堡按下，加入背景
             if (menuCheck.checked) {
@@ -306,6 +328,10 @@
     </script>
     <script>
         // 待處理
+        // 待補：
+        // 1.主頁面出現暫停時間
+        // 2.選單(menu)出現暫停時間(pauseTimeInMenu)
+        // 3.按下回復按鈕後，重現忙碌模式wrap、暫停接單wrap        
 
         //打烊時間 #closeTime
     </script>

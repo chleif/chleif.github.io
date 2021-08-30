@@ -133,6 +133,10 @@ body {
     margin-left: 20px;
     margin-right: 20px;
 }
+.function button{
+    display: block;
+    margin: 0;
+}
 
 .function .item {
     padding-top: 20px;
@@ -172,20 +176,18 @@ body {
     display: none;
 }
 
-/*待處理
-1.display:none
-2.貼底
-*/
-
 .pauseTimeInMenu {
+    display: flex;
     width: 100%;
-    bottom: 0;
     margin: 0;
     padding: 0;
     background-color: chocolate;
     justify-content: center;
     align-items: center;
-    display: none;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: none;    
 }
 
 .pauseTimeInMenu i {
@@ -208,6 +210,15 @@ body {
     width: 90%;
     margin: auto;
     height: 70vh;
+}
+
+#pauseReason-detail{
+    margin-top: 10px;
+    border: 0;
+    color: gray;
+    border-bottom: 1px solid gray;
+    /* display: block; */
+    width: 100%;
 }
 
 /*待機模式主頁面*/
@@ -256,6 +267,7 @@ body {
     z-index: 1;
 }
 
+/* 暫時隱藏待機頁面->製作其他主頁面 */
 .mainPage .StandbyMainPage{
     display: none;
 }
