@@ -1,0 +1,261 @@
+/* reset */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 基底.container-fluid */
+
+body {
+    background-color: black;
+}
+
+/* header */
+
+/*設定header高度*/
+
+.container-fluid {
+    padding: 5px;
+    height: 20vh;
+}
+
+/* header三區塊=>漢堡、現在訂單、歷史訂單 */
+
+/* 大小 */
+
+.top {
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+
+.hb {
+    height: 80px;
+    width: 8%;
+}
+
+/* header 現在訂單 */
+
+.order {
+    height: 80px;
+    width: 80%;
+}
+
+/* header 歷史訂單 */
+
+#historyOrder {
+    height: 80px;
+    width: 8%;
+}
+
+/* header三區塊=>漢堡、現在訂單、歷史訂單 */
+
+/* 內容 */
+
+.hb {
+    background-color: rgba(58, 58, 58, 0.678);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#newList {
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-right: 1px solid #000;
+}
+
+#cooking {
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-right: 1px solid #000;
+}
+
+#finishCook {
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#historyOrder {
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hb:hover, #newList:hover, #cooking:hover, #finishCook:hover, #historyOrder:hover {
+    background-color: rgba(122, 121, 121, 0.795);
+}
+
+/*漢堡內選單*/
+
+/* 漢堡選單 */
+
+.menu {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    width: 300px;
+    position: absolute;
+    top: -5px;
+    left: -305px;
+    background-color: #fff;
+    /* padding: 20px; */
+    transition: .5s;
+    z-index: 10;
+}
+
+/* 選單內容 */
+
+/*點案漢堡後出現選單*/
+
+#menu-check:checked~header .menu {
+    left: 0px;
+}
+
+.menuLogo {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.function {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.function .item {
+    padding-top: 20px;
+}
+
+.switch {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.shoperFunction {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*選單內功能鍵*/
+
+.iconFunction {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconFunction i {
+    padding: 5px;
+}
+
+.wrapFunction p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.restartWrap {
+    display: none;
+}
+
+/*待處理
+1.display:none
+2.貼底
+*/
+
+.pauseTimeInMenu {
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    background-color: chocolate;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.pauseTimeInMenu i {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.pauseTimeInMenu p {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+/* 主頁面(JS資料帶入區)mainPage */
+
+/*主頁面架構*/
+
+#mainPage {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    height: 70vh;
+}
+
+/*待機模式主頁面*/
+
+.StandbyMainPage {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.StandbyDetail {
+    color: white;
+    text-align: center;
+}
+
+.StandbyDetail i {
+    font-size: 20px;
+}
+
+.StandbyDetail p {
+    margin: 5px 0;
+}
+
+#closeTime {
+    color: gray;
+}
+
+
+/*新訂單主頁面*/
+
+
+/*modal*/
+
+.modal p {
+    font-size: 14px;
+}
+
+/* 暫存 */
+
+.bg-style {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    z-index: 1;
+}
+
+.mainPage .StandbyMainPage{
+    display: none;
+}

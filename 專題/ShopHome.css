@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 基底.container-fluid */
+body {
+    background-color: white;
+}
+
+/* header */
+
+/* 漢堡 */
+
+
+
+#hamburger {
+    width: 8%;
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;    
+    color: white;
+}
+
+.orderStage {
+    padding: 0;
+}
+
+#newList {
+    height: 25vh;
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid #000;
+}
+
+#cooking {
+    height: 25vh;
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid #000;
+}
+
+#finishCook {
+    height: 25vh;
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#historyOrder {
+    height: 8vh;
+    display: flex;
+    background-color: rgba(58, 58, 58, 0.678);
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+/* 主頁面(JS資料帶入)mainPage */
+
+.mainPage {
+    background-color: brown;
+}
+
+.mainPageInfor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeTime {
+    color: gray;
+}
+
+/* 站存 */
+
+nav {
+    display: none;
+}

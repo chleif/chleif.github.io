@@ -16,20 +16,35 @@
             margin-bottom: 60px;
         }
 
-        .container .text-small{
-            font-size: 26px;
+        .container img {
+            margin-bottom: 30px;
+        }
+        
+        .container p {
+            font-size: 36px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        #searchText {
+            font-size: 36px;
+        }
+
+        .container .text-small {
+            font-size: 16px;
+            line-height: 3;
         }
 
         .btn-half-block {
             width: 50%;
+            background-color: black;
         }
 
         .btn-half-block a {
             color: white;
+            font-size: 18px;
         }
-        .container img{
-            margin-bottom: 30px;
-        }
+
     </style>
 </head>
 
@@ -42,9 +57,9 @@
             <div class="col-12">
                 <img class="" src="https://picsum.photos/200/200/?random=1">
             </div>
-            <p class="col-12 display-4">找不到符合</p>
-            <p id="searchText" class="col-12 display-4">「XX」</p>
-            <p class="col-12 display-4">的項目</p>
+            <p class="col-12 fontUsualSize">找不到符合</p>
+            <p id="searchText" class="col-12">「XX」</p>
+            <p class="col-12 fontUsualSize">的項目</p>
             <p class="col-12 text-small">請改為搜尋其他項目</p>
             <div class="col-12">
                 <button id="seeAllResyaurant" type="button " class="btn btn-dark btn-lg btn-half-block">
@@ -53,7 +68,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- footer -->
     <footer>帶入共同layout</footer>
 
