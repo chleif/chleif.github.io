@@ -155,7 +155,37 @@ body {
 }
 
 /*選單內功能鍵*/
+/*menu區塊*/
 
+
+/*選單內功能鍵延伸*/
+/*主要功能modal高度放大*/
+.fullModal{
+    height: 100vh;
+}
+/*餐點訊息狀況頁面*/
+.mealDetail-header{
+    justify-content: space-between;
+}
+#mealDetail-search{
+    height: 30px;
+    width: 80%;
+}
+.mealDetail-item{
+    display: flex;
+    justify-content: space-between;
+}
+.mealStatus button{
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.mealItem-sellOut{
+    display: none;
+}
+.mealItem-sellOutForever{
+    display: none;
+}
+/*shoperFunction*/
 .iconFunction {
     margin: auto;
     justify-content: center;
@@ -201,6 +231,15 @@ body {
     line-height: 1;
 }
 
+#pauseReason-detail{
+    margin-top: 10px;
+    border: 0;
+    color: gray;
+    border-bottom: 1px solid gray;
+    /* display: block; */
+    width: 100%;
+}
+
 /* 主頁面(JS資料帶入區)mainPage */
 
 /*主頁面架構*/
@@ -212,14 +251,7 @@ body {
     height: 70vh;
 }
 
-#pauseReason-detail{
-    margin-top: 10px;
-    border: 0;
-    color: gray;
-    border-bottom: 1px solid gray;
-    /* display: block; */
-    width: 100%;
-}
+
 
 /*待機模式主頁面*/
 
