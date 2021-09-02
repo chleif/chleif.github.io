@@ -1,0 +1,123 @@
+.keyword{
+    display: block;
+}
+
+/*店家卡片*/
+.shopCard img {
+    width: 100%;
+}
+
+.foodCard{
+    width: 100%;
+}
+
+.shopNameandPoint{
+    display: flex;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 12px;
+    align-items: center;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    color: black;
+}
+.point{
+    display: flex;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: #EEEEEE;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.shopName{
+    font-size: 20px;
+}
+.TWD{
+    display: flex;
+    color: black;
+    font-size: 12px;
+}
+.dotSpace{
+    margin: 0 10px 0 10px;
+}
+/*店家卡片*/
+/**卡片標籤(買一送一)*/
+.Tag{
+    line-height: 16px;
+    display: inline-block;
+    background-color: #05a357;
+    border-radius: 0 24px 24px 0;
+    color: #ffff;
+    font-size: 14px;
+    padding: 4px 12px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.headline{
+    position: relative;
+}
+.shopCard .col{
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/*店家卡片*/
+/**我的最愛功能*/
+.touchZone{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.favorite{
+    display: flex;
+    height: 28px;
+    width: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.switch{
+    position: relative;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;    
+}
+/***實心愛心*/
+.hSolid4hover {
+    z-index: 2;
+    position: absolute;
+    color: rgb(177, 177, 177);
+    display: none;
+}
+/***空心愛心*/
+.hEmpty {
+    position: absolute;
+    color: rgb(253, 253, 253);
+}
+/***觸摸愛心*/
+.switch:hover .hEmpty{
+    display: none;
+}
+.switch:hover .hSolid4hover{
+    z-index: 2;
+    display: block;
+}
+
+.hSolid {
+    z-index: 2;
+    position: absolute;
+    color: rgb(253, 253, 253);
+    display: none;
+}
+
+
+
