@@ -1,0 +1,58 @@
+/* 暫存 導入MVC時要刪除 */
+
+header, footer {
+    background-color: black;
+    color: white;
+}
+/* 整版大小 */
+.storeRegisterContainer{
+    max-width: 1900px;
+}
+/* 說明欄 */
+
+.illustrate {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* 表單欄 */
+
+.register {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.register .firstNameDiv {
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.register .secondNameDiv {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+p a {
+    color: green;
+}
+/* 背景圖設定 */
+@media screen and (min-width:768px) {
+    .backgroundIMG {
+        background-image: url(register.jpg);
+        height: 100%;
+    }
+
+    .register {
+        background-color: white;
+        padding: 20px;
+    }
+
+    .storeRegisterRow .illustrate {
+        display: flex;
+    }
+    .illustrateDetail{
+        margin-top: auto;
+        margin-bottom: auto;
+        color: white;
+    }
+}

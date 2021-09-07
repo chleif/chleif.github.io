@@ -6,131 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- bs4.6 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <!-- fontawsome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <style>
-        i {
-            color: white;
-        }
-
-        .test {
-            background-color: black;
-        }
-
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 1900px;
-            background-color: tomato;
-            padding: 0;
-        }
-
-        .div3 {
-            background-color: yellow;
-            /* padding: 0;
-            margin: 0; */
-        }
-
-        .div9 {
+        .fir {
             background-color: blueviolet;
-            /* padding: 0;
-            margin: 0; */
+        }
+
+        .sec {
+            background-color: royalblue;
         }
     </style>
 </head>
 
 <body>
-    <div class="test">
-        <i class="far fa-heart"></i>
-    </div>
     <div class="container">
         <div class="row">
-            <div class="col-6 div3">11111</div>
-            <div class="col-6 div9">2</div>
+            <div class="fir col col-sm-12 col-lg-6">123</div>
+            <div class="sec col col-sm-12 col-lg-6">456</div>
         </div>
     </div>
 
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="row col-3 listPage">
-                <div class="container">
-                    <input type="checkbox" id="menu_check">
-                    <div id="hamburger" class="row col-12">
-                        <label for="hb" for="menu_check">
-                            <i class="fas fa-bars "></i>
-                        </label>
-                        <nav>
-                            <img src="https://picsum.photos/50/50/?random=1">
-                            <a href="#">餐點供應情況</a>
-                            <a href="#">營業時間</a>
-                            <a href="#">訂單支援</a>
-                            <a href="#">客服中心</a>
-                            <a href="#">客服訊息</a>
-                            <a href="#">操作指南</a>
-                            <a href="#">設定</a>
-                        </nav>
-                    </div>
-                    <div id="newList" class="row col-12 ">
-                        <!-- 新訂單 -->
-                        <i class="far fa-bell"></i>
-                    </div>
-                    <div id="cooking" class="row col-12">
-                        <!-- 餐點準備中 -->
-                        <i class="fas fa-sticky-note"></i>
-                    </div>
-                    <div id="finishCook" class="row col-12">
-                        <!-- 可取餐 -->
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <div id="historyOrder" class="row col-12">
-                        <!-- 歷史訂單 -->
-                        <i class="far fa-clock"></i>
-                    </div>
-                </div>
+    <div class="input-group mb-3">
+        <!-- <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div> -->
+    </div>
+    <input type="text" class="form-control" placeholder="Username">
+    123
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button type="button" class="btn btn-outline-secondary">TW</button>
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Taiwan台灣</a>
+                <a class="dropdown-item" href="#">Hong Kong(香港)</a>
+                <a class="dropdown-item" href="#">United States</a>
             </div>
-            <div id="mainPage" class="col-9 mainPage ">
-                <div class="mainPageInfor align-self-center">
-                    <i class="fas fa-hamburger"></i>
-                    <p>營業中</p>
-                    <p id="closeTime">4:00PM 打烊</p>
-                </div>
+            <button type="button" class="btn btn-outline-secondary" disabled="true">+886</button>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+    </div>
+456
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+        <div class="input-group-prepend">
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">餐廳</a>
+                <a class="dropdown-item" href="#">便利商店</a>
+                <a class="dropdown-item" href="#">特色食品商店</a>
+                <a class="dropdown-item" href="#">酒類專賣店</a>
+                <a class="dropdown-item" href="#">零售</a>
             </div>
         </div>
     </div>
-    <i class="far fa-heart heart"></i>
 
-    <button class="btn border-0" data-toggle="modal" data-target="#mealDetailModal">餐點訊息狀況</button>
+    test
 
-    <div class="modal fade" id="mealDetailModal" tabindex="-1" role="dialog" aria-labelledby="mealDetailTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="mealDetailTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button type="button" class="btn btn-outline-secondary">TW</button>
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Taiwan台灣</a>
+                <a class="dropdown-item" href="#">Hong Kong(香港)</a>
+                <a class="dropdown-item" href="#">United States</a>
             </div>
+            <button type="button" class="btn btn-outline-secondary" disabled="true">+886</button>
         </div>
+        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
     </div>
+
+    
 </body>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>

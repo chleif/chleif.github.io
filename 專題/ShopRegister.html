@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopRegister</title>
+    <!-- bootstrap4.6 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="ShopRegister.css">
+</head>
+
+<body>
+    <header>Header待套版</header>
+
+    <div class="container storeRegisterContainer">
+        <div class="backgroundIMG">
+            <div class="row storeRegisterRow">
+                <!-- 說明欄 -->
+                <div class="illustrate col col-12 col-md-5 ">
+                    <div class="illustrateDetail">
+                        <h1>您現在可輕鬆接觸客群</h1>
+                        <p>HolySong的全球系統提供您所需的彈性、能見度和顧客深入分析，讓您與更多顧客建立聯繫。立即成為合作夥伴</p>
+                    </div>
+                </div>
+                <!-- 表單欄 -->
+                <div class="register col col-12 col-md-6">
+                    <h2>開始使用</h2>
+                    <label for="storeName"></label>
+                    <label for="storeAddress"></label>
+                    <label for=""></label>
+                    <input type="text" name="" class="form-control" id="storeName" placeholder="餐廳名稱">
+                    <input type="text" name="" class="form-control" id="storeAddress" placeholder="餐廳地址">
+                    <input type="text" name="" class="form-control" id="storeFloor" placeholder="樓層/房號(選填)">
+                    <label for="ownerEmail"></label>
+                    <div class="row">
+                        <div class="col col-6 firstNameDiv">
+                            <label for="ownerFirstName"></label>
+                            <input type="text" name="" class="form-control" id="ownerFirstName" placeholder="名字">
+                        </div>
+                        <div class="col col-6 secondNameDiv">
+                            <label for="ownerLastName"></label>
+                            <input type="text" name="" class="form-control" id="ownerLastName" placeholder="姓氏">
+                        </div>
+                    </div>
+                    <input type="email" name="" class="form-control" id="ownerEmail" placeholder="電子郵件地址">
+                    <!-- 問題 -->
+                    <!-- 下拉選單無效 -->
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button type="button" class="btn btn-outline-secondary">TW</button>
+                            <button type="button"
+                                class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Taiwan台灣</a>
+                                <a class="dropdown-item" href="#">Hong Kong(香港)</a>
+                                <a class="dropdown-item" href="#">United States</a>
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary" disabled="true">+886</button>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"
+                            placeholder="手機號碼">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="storeType"
+                            aria-label="Text input with segmented dropdown button" placeholder="業務類型">
+                        <div class="input-group-prepend">
+                            <button type="button"
+                                class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">餐廳</a>
+                                <a class="dropdown-item" href="#">便利商店</a>
+                                <a class="dropdown-item" href="#">特色食品商店</a>
+                                <a class="dropdown-item" href="#">酒類專賣店</a>
+                                <a class="dropdown-item" href="#">零售</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p>按一下「送出」即表示您同意<a href="#">HolySong一般條款與細則</a> ，並確認您已閱讀<a href="#">隱私政策</a>。</p>
+                    <button type="button" class="btn btn-success btn-block" id="submitBtn">送出</button>
+                </div>
+                <div class="col col-0 col-md-1"></div>
+            </div>
+        </div>
+    </div>
+    <footer>Footer待套版</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
