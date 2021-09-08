@@ -8,6 +8,8 @@ header, footer {
 .storeRegisterContainer{
     max-width: 1900px;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 }
 /* 說明欄 */
