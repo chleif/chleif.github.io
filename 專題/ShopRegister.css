@@ -41,6 +41,7 @@ p a {
 @media screen and (min-width:768px) {
     .backgroundIMG {
         background-image: url(register.jpg);
+        background-size: cover;
         height: 100%;
     }
 
