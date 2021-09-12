@@ -47,7 +47,7 @@ p a {
     .backgroundIMG {
         background-image: url(register.jpg);
         background-size: cover;
-        height: 800px;
+        height: 90vh;
     }
 
     .register {
