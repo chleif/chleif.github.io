@@ -1,0 +1,29 @@
+圖片
+	主圖片	id="mainimg"
+外觀
+	太空輝	id="gray"
+	銀	id="silver"
+	玫瑰金	id="pink"
+	綠	id="green"
+	天空藍	id="blue"
+
+儲存空間
+	64G	id="s64GB"
+	128G	id="s256GB"
+
+連線
+	wifi	id="WiFi"
+	network	id="mobile"
+
+金額
+	標題金額	class="price"
+	儲存空間金額	id="priceFor64GB"
+			id="priceFor256GB"
+	連線能力金額	id="priceForWifi"
+			id="priceForNetwork"
+	總金額		id="totalPrice"
+	稅		id="tax"
+
+let url, mainImg, btnGray, btnSilver, btnPink, btnGreen, btnBlue, btn64GB, btn256BG, btnWIFI, btnNetwork, price, priceFor64GB, priceFor256GB, priceForWIFI, priceForNetwork, totalPrice, tax;
+
+https://tide-emery-e17.notion.site/iPad-7ff67b52703a4e05a719782c5a3aeb3a
