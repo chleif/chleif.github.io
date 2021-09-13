@@ -22,11 +22,18 @@ header, footer {
     margin-bottom: 5px;
 }
 
+
+
 /* 表單欄 */
 
 .register {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+}
+
+.register h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .register .firstNameDiv {
@@ -41,6 +48,11 @@ header, footer {
 
 p a {
     color: green;
+}
+
+#submitBtn{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 /* 背景圖設定 */
 @media screen and (min-width:768px) {
