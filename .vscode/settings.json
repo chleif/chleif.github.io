@@ -1,5 +1,5 @@
 {
     "liveServer.settings.port": 5502,
-    "appService.defaultWebAppToDeploy": "/subscriptions/6c6e1b3b-1a1f-4d08-a6d4-180c9995e52c/resourceGroups/20211124GA/providers/Microsoft.Web/sites/20211124ForGA",
+    "appService.defaultWebAppToDeploy": "",
     "appService.deploySubpath": "黑客松"
 }
