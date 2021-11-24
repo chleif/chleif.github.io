@@ -24,74 +24,39 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="fir col col-sm-12 col-lg-6">123</div>
-            <div class="sec col col-sm-12 col-lg-6">456</div>
-        </div>
-    </div>
-
-    <div class="input-group mb-3">
-        <!-- <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">@</span>
-        </div> -->
-    </div>
-    <input type="text" class="form-control" placeholder="Username">
-    123
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <button type="button" class="btn btn-outline-secondary">TW</button>
-            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Taiwan台灣</a>
-                <a class="dropdown-item" href="#">Hong Kong(香港)</a>
-                <a class="dropdown-item" href="#">United States</a>
-            </div>
-            <button type="button" class="btn btn-outline-secondary" disabled="true">+886</button>
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-    </div>
-456
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-        <div class="input-group-prepend">
-            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">餐廳</a>
-                <a class="dropdown-item" href="#">便利商店</a>
-                <a class="dropdown-item" href="#">特色食品商店</a>
-                <a class="dropdown-item" href="#">酒類專賣店</a>
-                <a class="dropdown-item" href="#">零售</a>
-            </div>
-        </div>
-    </div>
-
-    test
-
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <button type="button" class="btn btn-outline-secondary">TW</button>
-            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Taiwan台灣</a>
-                <a class="dropdown-item" href="#">Hong Kong(香港)</a>
-                <a class="dropdown-item" href="#">United States</a>
-            </div>
-            <button type="button" class="btn btn-outline-secondary" disabled="true">+886</button>
-        </div>
-        <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-    </div>
-
     
+
+        <form name="testForm" >  <!-- 其他屬性(attribute)請自行添加. -->
+            <input value="2" type="hidden" name="pageIndex" />
+            
+            <select name="pageIndexA" >
+                <option value="1" selected >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </form>
+    
+        <script> SetPage( document.forms['testForm'] ); </script>
+        
+    
+    <script>
+    
+    function SetPage( form ) {
+        var userSelectedVal = form.elements['pageIndex'].value ;  
+        
+        var selector = form.elements['pageIndexA'] ;
+        var opts = selector.options;
+        for ( var opt, j=0; j<opts.length ; j++ ) {
+            opt = opts[j];
+            if ( opt.value == userSelectedVal ) {
+                selector.selectedIndex = j;
+                break;
+            }
+        } // for
+    } // SetPage()
+    
+</script> 
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

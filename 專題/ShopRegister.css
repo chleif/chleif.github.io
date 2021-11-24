@@ -1,16 +1,24 @@
-/* 暫存 導入MVC時要刪除 */
-
-header, footer {
-    background-color: black;
-    color: white;
+/* header */
+.container{
+    max-width: 1980px;
+    margin: auto;
 }
+header {
+    text-align: center;
+}
+header img{
+    width: 300px;
+}
+
+/*註冊*/
 /* 整版大小 */
 .storeRegisterContainer{
+    min-width: 375px;
     max-width: 1900px;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding: 0;    
 }
 .storeRegisterRow{
     margin: 0;
@@ -28,7 +36,7 @@ header, footer {
 
 .register {
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid gray;    
 }
 
 .register h2{
@@ -54,12 +62,15 @@ p a {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
+/*註冊RWD*/
 /* 背景圖設定 */
 @media screen and (min-width:768px) {
     .backgroundIMG {
         background-image: url(register.jpg);
         background-size: cover;
-        height: 90vh;
+        height:calc(85vh - 133.975px) ;
     }
 
     .register {
@@ -77,5 +88,40 @@ p a {
         margin-top: auto;
         margin-bottom: auto;
         color: white;
+    }
+}
+
+
+
+/*footer*/
+footer{
+    margin: 0;        
+    background-color: rgb(49,75,88);
+    color: #fff;
+    position:absolute;
+    left: 0;
+    width: 100%;
+    bottom: auto;        
+}
+.privacy a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.privacy a:first-child{
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+}
+
+/*footer RWD*/
+@media screen and (min-width:768px) {
+    footer{
+        padding: 50px 0;
+        bottom: 0;
+        height: 15vh;
+    }
+    .footer-body{
+        display: flex;
+        justify-content: space-between;
     }
 }

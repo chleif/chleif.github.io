@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="02.css">
     <title>Document</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNYMWXN126"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DNYMWXN126');
+    </script>
+
 </head>
 
 <body>
@@ -73,7 +84,7 @@
         submit.addEventListener('click', function () {
             tryAnswer = input.value;
             intJudge(tryAnswer)
-            if(a==4){
+            if (a == 4) {
                 reset()
             }
         })
@@ -85,7 +96,7 @@
             if (inputLength.size == 4) {
                 answerJudge(x);
                 addTryAnswerResult();
-                input.value = '';                
+                input.value = '';
             }
             else { alert('請輸入4個不重複的數字') };
             input.value = '';
